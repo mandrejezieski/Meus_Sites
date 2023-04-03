@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lactalis.com.br/pt/publicacoes/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Apr 2023 05:23:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+            <title>Publicações | </title>
+        <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta charset="UTF-8">
+    <meta name="host" content="https://lactalis.com.br/">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="apple-touch-icon" href="../../wp-content/themes/astrusweb/ios_icon.html" />
+    <link rel="shortcut icon" href="../../wp-content/themes/astrusweb/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Reenie+Beanie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+    <script type="text/javascript" src="../../wp-content/themes/astrusweb/assets/js/textDimensions.js"></script>
+               <link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/lactalis.com.br\/wp-includes\/js\/wp-emoji.js?ver=5.4.1","twemoji":"https:\/\/lactalis.com.br\/wp-includes\/js\/twemoji.js?ver=5.4.1"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/stylec225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vendor-css'  href='../../wp-content/themes/astrusweb/assets/css/vendorc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='../../wp-content/themes/astrusweb/stylec225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='add-to-homescreen-css'  href='../../wp-content/themes/astrusweb/assets/css/add-to-homescreenc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='../../wp-content/themes/astrusweb/assets/css/mainc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Ubuntu-css'  href='https://fonts.googleapis.com/css?family=Ubuntu%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i&amp;ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Roboto-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i&amp;ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='moove_gdpr_frontend-css'  href='../../wp-content/plugins/gdpr-cookie-compliance/dist/styles/gdpr-main5859.css?ver=4.9.1' type='text/css' media='all' />
+<style id='moove_gdpr_frontend-inline-css' type='text/css'>
+#moove_gdpr_cookie_modal,#moove_gdpr_cookie_info_bar,.gdpr_cookie_settings_shortcode_content{font-family:Nunito,sans-serif}#moove_gdpr_save_popup_settings_button{background-color:#373737;color:#fff}#moove_gdpr_save_popup_settings_button:hover{background-color:#000}#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton,#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton{background-color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green{background-color:#52b5de;border-color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton:hover,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green:hover{background-color:#fff;color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon{background-color:#52b5de;border:1px solid #52b5de}#moove_gdpr_cookie_info_bar span.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar span.change-settings-button:focus{-webkit-box-shadow:0 0 1px 3px #52b5de;-moz-box-shadow:0 0 1px 3px #52b5de;box-shadow:0 0 1px 3px #52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button{color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .gdpr-acc-link{line-height:0;font-size:0;color:transparent;position:absolute}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close:hover i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button.focus-g,span.change-settings-button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:focus{color:#52b5de}#moove_gdpr_cookie_modal.gdpr_lightbox-hide{display:none}
+</style>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate330a.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://lactalis.com.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lactalis.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://lactalis.com.br/wp-includes/wlwmanifest.xml" /> 
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://lactalis.com.br/?p=3195' />
+<link rel="alternate" type="application/json+oembed" href="https://lactalis.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flactalis.com.br%2Fpt%2Fpublicacoes%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://lactalis.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flactalis.com.br%2Fpt%2Fpublicacoes%2F&amp;format=xml" />
+    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBVSS2W');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBVSS2W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        <nav class="responsive-nav">
+        <div class="centerli">
+            <li>
+                 <div class="openlist">Institucional</div>
+                <ul>
+                    <li>
+                        <a href="../quem-somos/index.html">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="../nossa-historia/index.html">Nossa História</a>
+                    </li>
+<!--                     <li>
+                        <a href="/pt/nossas-marcas">Nossas Marcas</a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="/pt/fale-com-lactalis">Consumidores</a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
+                 <div class="openlist">Produtos</div>
+                <ul>
+                    <li>
+                        <a href="https://lactalis.com.br/nossas-marcas">Nossas Marcas</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/novidades">Novidades</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Produtor</div>
+                <ul>
+                    <li>
+                        <a href="https://lactalis.com.br/produtor-lactalis">Produtor Lactalis</a>
+                    </li>
+                     <li>
+                        <a href="https://lactalis.com.br/clube">Clube do Produtor</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/lactaleite">Lactaleite</a>
+                    </li>
+                    <li>
+                        <a href="../dicas-do-tecnico/index.html">Dicas do Técnico</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/comunicacao-direta">Comunicação Direta</a>
+                    </li>
+                    <li>
+                                                    <a target="_blank" href="https://lactalis.com.br/wp-content/files_mf/1675171453PreçopagoaosprodutoresdeLeiteFEVEREIRO23.pdf">
+                                Preço do Leite                            </a>
+
+                                            </li>
+<!--                     <li>
+                        <a href="/convenios">Convênios</a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Nossa gente</div>
+                <ul>
+<!--                     <li>
+                        <a href="/pt/nossas-acoes">Nossas Ações</a>
+                    </li> -->
+                    <li>
+                        <a href="http://portal.lactalis.com.br/">Portal do Colaborador</a>
+                    </li>
+                    <li>
+                        <a href="../institucional-trabalhe-conosco/index.html">Trabalhe Conosco</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Notícias</div>
+                <ul>
+
+                    <li>
+                        <a href="../noticias-lactalis/indexe363.html?category=lactalis-na-midia">Lactalis na Mídia</a>
+                    </li>
+                    <li>
+                        <a href="../noticias-lactalis/index1cf7.html?category=releases">Releases</a>
+                    </li>
+                    <!-- <li>
+                        <a href="/pt/noticias-lactalis?category=press-releases">Press Releases</a>
+                    </li> -->
+                     <li>
+                        <a href="index.html">Publicações</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="openlist" href="../forte-e-responsavel/index.html">Forte & Responsável</a>
+            </li>
+            <li><a class="openlist" href="../contato/index.html">Contato</a></li>
+
+           <div class="language-head">
+                                        <a class="braico active" href="https://lactalis.com.br/pt">BRA</a>
+                                                <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                    </div>
+            <div class="close">
+                
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div style="max-width: 1200px;" class="content">
+            <div class="pushymain">
+                <div class="hambmain">
+                    <div></div>
+                </div>
+            </div>
+            <div style="max-width: 490px;" class="menu-left">
+                <ul>
+                    <li>
+                        <a href="#">Institucional</a>
+                        <ul>
+                            <li style="" >
+                                <a href="../quem-somos/index.html">Quem Somos</a>
+                            </li>
+                            <li>
+                                <a href="../nossa-historia/index.html">Nossa História</a>
+                            </li>
+<!--                              <li>
+                                <a href="/pt/nossas-marcas">Nossas Marcas</a>
+                            </li> -->
+                            <!-- <li>
+                                <a href="/pt/fale-com-lactalis">Consumidores</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Produtos</a>
+                        <ul>
+                            <li>
+                                <a href="https://lactalis.com.br/nossas-marcas">Nossas Marcas</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/novidades">Novidades</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Produtor</a>
+                        <ul>
+                            <li>
+                                <a href="https://lactalis.com.br/produtor-lactalis">Produtor Lactalis</a>
+                            </li>
+                             <li>
+                                <a href="https://lactalis.com.br/clube">Clube do Produtor</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/lactaleite">Lactaleite</a>
+                            </li>
+                            <li>
+                                <a href="../dicas-do-tecnico/index.html">Dicas do Técnico</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/comunicacao-direta">Comunicação Direta</a>
+                            </li>
+                            <li>
+                                                                    <a target="_blank" href="https://lactalis.com.br/wp-content/files_mf/1675171453PreçopagoaosprodutoresdeLeiteFEVEREIRO23.pdf">
+                                        Preço do Leite                                    </a>
+
+                                                            </li>
+<!--                             <li>
+                                <a href="/convenios"></a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Cliente</a>
+                        <ul>
+                            <li>
+                                <a href="https://boleto.lactalis.com.br/" target="blank">2ª Via de Boleto</a>
+                            </li>
+                            <li>
+                                <a href="http://financas.batavo.com.br/" target="blank">Consulta Pagamentos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Fornecedor</a>
+                        <ul>
+                            <li>
+                                <a href="http://financas.batavo.com.br/" target="blank">Consulta Pagamentos</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+             <a class="logoheader" href="https://lactalis.com.br/"></a>
+             <div style="max-width: 490px;" class="right-site">
+                <div class="menu-right">
+                    <ul>
+                        <li>
+                            <a href="#">Nossa gente</a>
+                            <ul>
+<!--                                <li>
+                                    <a href="/pt/nossas-acoes">Nossas Ações</a>
+                                </li> -->
+                                <li>
+                                    <a href="http://portal.lactalis.com.br/">Portal do Colaborador</a>
+                                </li>
+                                <li>
+                                    <a href="../institucional-trabalhe-conosco/index.html">Trabalhe Conosco</a>
+                                </li>
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="#">Notícias</a>
+                            <ul>
+                                <li>
+                                    <a href="../noticias-lactalis/indexe363.html?category=lactalis-na-midia">Lactalis na Mídia</a>
+                                </li>
+                                <li>
+                                    <a href="../noticias-lactalis/index1cf7.html?category=releases">Releases</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="/pt/noticias-lactalis?category=press-releases">Press Releases</a>
+                                </li> -->
+                                 <li>
+                                    <a href="index.html">Publicações</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../forte-e-responsavel/index.html">Forte & Responsável</a>
+                        </li>
+                        <li><a href="../contato/index.html">Contato</a></li>
+                    </ul>
+                </div>                
+                <div class="language-head">
+                                                <a class="braico active" href="https://lactalis.com.br/pt">BRA</a>
+                                                    <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                            <div class="list">
+                                                            <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                                    </div>
+                </div>
+            </div>
+    </header><style type="text/css">
+	body{
+		background-image:url(../../wp-content/themes/astrusweb/assets/images/background2.png);
+		background-position:right 1600px;
+		background-repeat: no-repeat;
+		background-size: initial;
+	}
+</style>
+<main class="diff-size">
+	<div class="center-text">
+	<h4 class="title">
+			Publicações		</h4>
+	</div>
+	<div class="center-gallery galery-controls">
+		<div class="revistas">
+							<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/Captura-de-Tela-2022-08-26-a%cc%80s-17.06.05.png);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1661544364RevistaLactalised10_site_altares.pdf"><span>download</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/rev1-1.jpg);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1545998815CaminhosdoLeiteLactaleitechegaparaampliarprodução.pdf"><span>download</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/rev2-1.jpg);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1545998802CaminhosdoLeiteNutriçãoturbinadaélucronobolso.pdf"><span>download</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/rev3-1.jpg);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1545998902CaminhosdoLeitemelhoramentogenéticosemmistério.pdf"><span>download</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/rev4-1.jpg);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1549482401RevistaLactalised04_site.pdf"><span>download</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/Captura-de-Tela-2019-09-26-a%cc%80s-13.18.47.png);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1569514827RevistaLactalised05_web.pdf"><span>download</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/Captura-de-Tela-2020-02-13-a%cc%80s-15.56.23.png);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1581620276RevistaLactalised06_website.pdf"><span>download</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/capa-1.jpg);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1593796663RevistaLactalised07_finalweb.pdf"><span>download</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/capa_revista.jpg);">
+						<a target="_blank" href="https://lactalis.com.br/wp-content/files_mf/Revista-Lactalis-ed08_site-final_.pdf"><span>Acessar</span></a>					</div>
+									<div class="item" style="background-image: url(../../wp-content/uploads/2018/12/0001.jpg);">
+						<a download href="https://lactalis.com.br/wp-content/files_mf/1628866261RevistaLactalised09_web_20072021.pdf"><span>download</span></a>					</div>
+						</div>
+		<div class="customNavigation">
+		  <a class="btn prev"></a>
+		  <a class="btn next"></a>
+		</div>
+	</div>
+</br>
+</br>
+</br>
+</br>
+</main>
+
+<footer>
+	<div class="content">
+		<div class="top-side">
+			<div class="spaces">
+				<span>
+					Fique por dentro das novidades				</span>
+				<div class="news">
+														</div>
+			</div>
+			<div class="right-side">
+				<div class="left">
+					<li><a href="../quem-somos/index.html">Institucional</a></li>
+                    <li><a href="../nossas-marcas/index.html">Produtos</a></li>
+                    <li><a href="../produtor-lactalis/index.html">Produtor</a></li>
+				 	<li><a href="../noticias-lactalis/index.html">Notícias</a></li>
+				 	<li><a href="../institucional-trabalhe-conosco/index.html">Nossa gente</a></li>
+                    <li><a href="../contato/index.html">Contato</a></li>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-side">
+						<a class="logo" href="https://lactalis.com.br/"></a>
+			<a class="logoastrusft" href="http://astrusweb.com.br/"></a>
+			<div class="redes">
+							</div>
+		</div>
+		
+	</div>
+</footer>
+
+  <!--copyscapeskip-->
+  <aside id="moove_gdpr_cookie_info_bar" class="moove-gdpr-info-bar-hidden moove-gdpr-align-center moove-gdpr-light-scheme gdpr_infobar_postion_bottom" role="note" aria-label="GDPR Cookie Banner" style="display: none;">
+    <div class="moove-gdpr-info-bar-container">
+      <div class="moove-gdpr-info-bar-content">
+        
+<div class="moove-gdpr-cookie-notice">
+  <p>Utilizamos ferramentas e serviços de terceiros que utilizam cookies.<br />
+Essas ferramentas nos ajudam a oferecer uma melhor experiência de navegação no site.</p>
+<p>Ao clicar no botão "Aceitar" você concorda com o uso de cookies em nosso site. <span role="link"  tabindex="1"  data-href="#moove_gdpr_cookie_modal" class="change-settings-button">Configurações</span></p>
+<p><span style="font-size: 11pt;"> </span></p>
+</div>
+<!--  .moove-gdpr-cookie-notice -->        
+<div class="moove-gdpr-button-holder">
+		  <button class="mgbutton moove-gdpr-infobar-allow-all gdpr-fbo-0" aria-label="Aceitar"  tabindex="1"  role="button">Aceitar</button>
+	  </div>
+<!--  .button-container -->      </div>
+      <!-- moove-gdpr-info-bar-content -->
+    </div>
+    <!-- moove-gdpr-info-bar-container -->
+  </aside>
+  <!-- #moove_gdpr_cookie_info_bar -->
+  <!--/copyscapeskip-->
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/vendor.js'></script>
+<script type='text/javascript' src='../../../cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/modernizr-2.6.2.min4e44.js?ver=1.3'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/add-to-homescreen4e44.js?ver=1.3'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/login73ad.js?ver=0.0'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/default73ad.js?ver=0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var moove_frontend_gdpr_scripts = {"ajaxurl":"https:\/\/lactalis.com.br\/wp-admin\/admin-ajax.php","post_id":"3195","plugin_dir":"https:\/\/lactalis.com.br\/wp-content\/plugins\/gdpr-cookie-compliance","show_icons":"all","is_page":"1","strict_init":"1","enabled_default":{"third_party":0,"advanced":0},"geo_location":"false","force_reload":"false","is_single":"","hide_save_btn":"false","current_user":"0","cookie_expiration":"365","script_delay":"2000","close_btn_action":"1","close_cs_action":"1","scripts_defined":"{\"cache\":true,\"header\":\"\",\"body\":\"\",\"footer\":\"\",\"thirdparty\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"},\"advanced\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"}}","gdpr_scor":"true","wp_lang":"_pt"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main5859.js?ver=4.9.1'></script>
+<script type='text/javascript'>
+var gdpr_consent__strict = "false"
+var gdpr_consent__thirdparty = "false"
+var gdpr_consent__advanced = "false"
+var gdpr_consent__cookies = ""
+</script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embedc225.js?ver=5.4.1'></script>
+
+    
+  <!--copyscapeskip-->
+  <!-- V1 -->
+  <div id="moove_gdpr_cookie_modal" class="gdpr_lightbox-hide" role="complementary" aria-label="GDPR Settings Screen">
+    <div class="moove-gdpr-modal-content moove-clearfix logo-position-left moove_gdpr_modal_theme_v1">
+          
+        <button class="moove-gdpr-modal-close" aria-label="Close GDPR Cookie Settings">
+          <span class="gdpr-sr-only">Close GDPR Cookie Settings</span>
+          <span class="gdpr-icon moovegdpr-arrow-close"></span>
+        </button>
+            <div class="moove-gdpr-modal-left-content">
+        
+<div class="moove-gdpr-company-logo-holder">
+  <img src="../../wp-content/uploads/2019/01/logo_lactalis_brasil-300x100.png" alt=""   width="300"  height="100"  class="img-responsive" />
+</div>
+<!--  .moove-gdpr-company-logo-holder -->        <ul id="moove-gdpr-menu">
+          
+<li class="menu-item-on menu-item-privacy_overview menu-item-selected">
+  <button data-href="#privacy_overview" class="moove-gdpr-tab-nav" aria-label="Visão geral de privacidade">
+    <span class="gdpr-nav-tab-title">Visão geral de privacidade</span>
+  </button>
+</li>
+
+  <li class="menu-item-strict-necessary-cookies menu-item-off">
+    <button data-href="#strict-necessary-cookies" class="moove-gdpr-tab-nav" aria-label="Cookies estritamente necessários">
+      <span class="gdpr-nav-tab-title">Cookies estritamente necessários</span>
+    </button>
+  </li>
+
+
+
+
+        </ul>
+        
+<div class="moove-gdpr-branding-cnt">
+  
+		<a href="https://wordpress.org/plugins/gdpr-cookie-compliance/" target="_blank" rel="noopener noreferrer nofollow" class='moove-gdpr-branding'>Distribuído por&nbsp; <span>GDPR Cookie Compliance</span></a>
+		</div>
+<!--  .moove-gdpr-branding -->      </div>
+      <!--  .moove-gdpr-modal-left-content -->
+      <div class="moove-gdpr-modal-right-content">
+        <div class="moove-gdpr-modal-title">
+           
+        </div>
+        <!-- .moove-gdpr-modal-ritle -->
+        <div class="main-modal-content">
+
+          <div class="moove-gdpr-tab-content">
+            
+<div id="privacy_overview" class="moove-gdpr-tab-main">
+      <span class="tab-title">Visão geral de privacidade</span>
+    <div class="moove-gdpr-tab-main-content">
+  	<p>Este site usa cookies para que possamos oferecer a melhor experiência de usuário possível. As informações de cookies são armazenadas em seu navegador e executam funções como reconhecê-lo quando você retorna ao nosso site e ajudar nossa equipe a entender quais seções do site você considera mais interessantes e úteis.</p>
+  	  </div>
+  <!--  .moove-gdpr-tab-main-content -->
+
+</div>
+<!-- #privacy_overview -->            
+  <div id="strict-necessary-cookies" class="moove-gdpr-tab-main" style="display:none">
+    <span class="tab-title">Cookies estritamente necessários</span>
+    <div class="moove-gdpr-tab-main-content">
+      <p>O cookie estritamente necessário deve estar ativado o tempo todo para que possamos salvar suas preferências de configuração de cookies.</p>
+      <div class="moove-gdpr-status-bar ">
+        <div class="gdpr-cc-form-wrap">
+          <div class="gdpr-cc-form-fieldset">
+            <label class="cookie-switch" for="moove_gdpr_strict_cookies">    
+              <span class="gdpr-sr-only">Enable or Disable Cookies</span>        
+              <input type="checkbox" aria-label="Cookies estritamente necessários"  value="check" name="moove_gdpr_strict_cookies" id="moove_gdpr_strict_cookies">
+              <span class="cookie-slider cookie-round" data-text-enable="Habilitado" data-text-disabled="Desabilitado"></span>
+            </label>
+          </div>
+          <!-- .gdpr-cc-form-fieldset -->
+        </div>
+        <!-- .gdpr-cc-form-wrap -->
+      </div>
+      <!-- .moove-gdpr-status-bar -->
+              <div class="moove-gdpr-strict-warning-message" style="margin-top: 10px;">
+          <p>Se você desativar este cookie, não poderemos salvar suas preferências. Isso significa que toda vez que você visitar este site, precisará habilitar ou desabilitar os cookies novamente.</p>
+        </div>
+        <!--  .moove-gdpr-tab-main-content -->
+                                              
+    </div>
+    <!--  .moove-gdpr-tab-main-content -->
+  </div>
+  <!-- #strict-necesarry-cookies -->
+            
+            
+            
+          </div>
+          <!--  .moove-gdpr-tab-content -->
+        </div>
+        <!--  .main-modal-content -->
+        <div class="moove-gdpr-modal-footer-content">
+          <div class="moove-gdpr-button-holder">
+			  		<button class="mgbutton moove-gdpr-modal-allow-all button-visible" role="button" aria-label="Habilitar todos">Habilitar todos</button>
+		  					<button class="mgbutton moove-gdpr-modal-save-settings button-visible" role="button" aria-label="Salvar Mudanças">Salvar Mudanças</button>
+				</div>
+<!--  .moove-gdpr-button-holder -->        </div>
+        <!--  .moove-gdpr-modal-footer-content -->
+      </div>
+      <!--  .moove-gdpr-modal-right-content -->
+
+      <div class="moove-clearfix"></div>
+
+    </div>
+    <!--  .moove-gdpr-modal-content -->
+  </div>
+  <!-- #moove_gdpr_cookie_modal -->
+  <!--/copyscapeskip-->
+</body>
+
+<!-- Mirrored from lactalis.com.br/pt/publicacoes/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Apr 2023 05:23:59 GMT -->
+</html>

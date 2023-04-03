@@ -1,0 +1,32 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 03 Apr 2023 02:57:49 at http://taotajima.jp +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwr20%e0C2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "pt_BR, en, *" http://taotajima.jp -O1 "C:\Meus Sites\site bonito" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/about/manifest.json (from taotajima.jp/about/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/manifest.json (from taotajima.jp/works/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/night-stroll/manifest.json (from taotajima.jp/works/night-stroll/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/MN/manifest.json (from taotajima.jp/works/MN/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/prism/manifest.json (from taotajima.jp/works/prism/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/ATTESA/manifest.json (from taotajima.jp/works/ATTESA/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/AJINOMOTO/manifest.json (from taotajima.jp/works/AJINOMOTO/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/Magic/manifest.json (from taotajima.jp/works/Magic/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/reiji-no-machi/manifest.json (from taotajima.jp/works/reiji-no-machi/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/Sarazanmai/manifest.json (from taotajima.jp/works/Sarazanmai/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/the-9d-project/manifest.json (from taotajima.jp/works/the-9d-project/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/mtv-ultrahits/manifest.json (from taotajima.jp/works/mtv-ultrahits/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/xperia-ear-duo/manifest.json (from taotajima.jp/works/xperia-ear-duo/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/techne/manifest.json (from taotajima.jp/works/techne/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/stripe-intl/manifest.json (from taotajima.jp/works/stripe-intl/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/itsuka-no-hoshi/manifest.json (from taotajima.jp/works/itsuka-no-hoshi/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/bravia-2017/manifest.json (from taotajima.jp/works/bravia-2017/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/asa-dan/manifest.json (from taotajima.jp/works/asa-dan/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/waxing-moon/manifest.json (from taotajima.jp/works/waxing-moon/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/xperia-ear/manifest.json (from taotajima.jp/works/xperia-ear/)
+02:58:49	Error: 	"Not Found" (404) at link taotajima.jp/works/sstv/manifest.json (from taotajima.jp/works/sstv/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 0 seconds : 73 links scanned, 51 files written (2071838 bytes overall) [1185117 bytes received at 19751 bytes/sec], 2071838 bytes transferred using HTTP compression in 51 files, ratio 56%, 12.1 requests per connection
+(21 errors, 0 warnings, 0 messages)

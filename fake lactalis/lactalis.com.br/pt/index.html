@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lactalis.com.br/pt/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Apr 2023 05:22:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+            <title>Misael Andrejezieski</title>
+        <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta charset="UTF-8">
+    <meta name="host" content="https://lactalis.com.br/">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="apple-touch-icon" href="../wp-content/themes/astrusweb/ios_icon.html" />
+    <link rel="shortcut icon" href="../wp-content/themes/astrusweb/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Reenie+Beanie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+    <script type="text/javascript" src="../wp-content/themes/astrusweb/assets/js/textDimensions.js"></script>
+               <link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/lactalis.com.br\/wp-includes\/js\/wp-emoji.js?ver=5.4.1","twemoji":"https:\/\/lactalis.com.br\/wp-includes\/js\/twemoji.js?ver=5.4.1"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../wp-includes/css/dist/block-library/stylec225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vendor-css'  href='../wp-content/themes/astrusweb/assets/css/vendorc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='../wp-content/themes/astrusweb/stylec225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='add-to-homescreen-css'  href='../wp-content/themes/astrusweb/assets/css/add-to-homescreenc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='../wp-content/themes/astrusweb/assets/css/mainc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Ubuntu-css'  href='https://fonts.googleapis.com/css?family=Ubuntu%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i&amp;ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Roboto-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i&amp;ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='moove_gdpr_frontend-css'  href='../wp-content/plugins/gdpr-cookie-compliance/dist/styles/gdpr-main5859.css?ver=4.9.1' type='text/css' media='all' />
+<style id='moove_gdpr_frontend-inline-css' type='text/css'>
+#moove_gdpr_cookie_modal,#moove_gdpr_cookie_info_bar,.gdpr_cookie_settings_shortcode_content{font-family:Nunito,sans-serif}#moove_gdpr_save_popup_settings_button{background-color:#373737;color:#fff}#moove_gdpr_save_popup_settings_button:hover{background-color:#000}#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton,#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton{background-color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green{background-color:#52b5de;border-color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton:hover,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green:hover{background-color:#fff;color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon{background-color:#52b5de;border:1px solid #52b5de}#moove_gdpr_cookie_info_bar span.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar span.change-settings-button:focus{-webkit-box-shadow:0 0 1px 3px #52b5de;-moz-box-shadow:0 0 1px 3px #52b5de;box-shadow:0 0 1px 3px #52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button{color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .gdpr-acc-link{line-height:0;font-size:0;color:transparent;position:absolute}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close:hover i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button.focus-g,span.change-settings-button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:focus{color:#52b5de}#moove_gdpr_cookie_modal.gdpr_lightbox-hide{display:none}
+</style>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate330a.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://lactalis.com.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lactalis.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://lactalis.com.br/wp-includes/wlwmanifest.xml" /> 
+<link rel="alternate" href="index.html" hreflang="pt" />
+<link rel="alternate" href="https://lactalis.com.br/fr/" hreflang="fr" />
+<link rel="alternate" href="https://lactalis.com.br/" hreflang="x-default" />
+    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBVSS2W');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBVSS2W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        <nav class="responsive-nav">
+        <div class="centerli">
+            <li>
+                 <div class="openlist">Institucional</div>
+                <ul>
+                    <li>
+                        <a href="quem-somos/index.html">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="nossa-historia/index.html">Nossa História</a>
+                    </li>
+<!--                     <li>
+                        <a href="/pt/nossas-marcas">Nossas Marcas</a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="/pt/fale-com-lactalis">Consumidores</a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
+                 <div class="openlist">Produtos</div>
+                <ul>
+                    <li>
+                        <a href="https://lactalis.com.br/nossas-marcas">Nossas Marcas</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/novidades">Novidades</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Produtor</div>
+                <ul>
+                    <li>
+                        <a href="https://lactalis.com.br/produtor-lactalis">Produtor Lactalis</a>
+                    </li>
+                     <li>
+                        <a href="https://lactalis.com.br/clube">Clube do Produtor</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/lactaleite">Lactaleite</a>
+                    </li>
+                    <li>
+                        <a href="dicas-do-tecnico/index.html">Dicas do Técnico</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/comunicacao-direta">Comunicação Direta</a>
+                    </li>
+                    <li>
+                                                    <a target="_blank" href="https://lactalis.com.br/wp-content/files_mf/1675171453PreçopagoaosprodutoresdeLeiteFEVEREIRO23.pdf">
+                                Preço do Leite                            </a>
+
+                                            </li>
+<!--                     <li>
+                        <a href="/convenios">Convênios</a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Nossa gente</div>
+                <ul>
+<!--                     <li>
+                        <a href="/pt/nossas-acoes">Nossas Ações</a>
+                    </li> -->
+                    <li>
+                        <a href="http://portal.lactalis.com.br/">Portal do Colaborador</a>
+                    </li>
+                    <li>
+                        <a href="institucional-trabalhe-conosco/index.html">Trabalhe Conosco</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Notícias</div>
+                <ul>
+
+                    <li>
+                        <a href="noticias-lactalis/indexe363.html?category=lactalis-na-midia">Lactalis na Mídia</a>
+                    </li>
+                    <li>
+                        <a href="noticias-lactalis/index1cf7.html?category=releases">Releases</a>
+                    </li>
+                    <!-- <li>
+                        <a href="/pt/noticias-lactalis?category=press-releases">Press Releases</a>
+                    </li> -->
+                     <li>
+                        <a href="publicacoes/index.html">Publicações</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="openlist" href="forte-e-responsavel/index.html">Forte & Responsável</a>
+            </li>
+            <li><a class="openlist" href="contato/index.html">Contato</a></li>
+
+           <div class="language-head">
+                                        <a class="braico active" href="https://lactalis.com.br/pt">BRA</a>
+                                                <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                    </div>
+            <div class="close">
+                
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div style="max-width: 1200px;" class="content">
+            <div class="pushymain">
+                <div class="hambmain">
+                    <div></div>
+                </div>
+            </div>
+            <div style="max-width: 490px;" class="menu-left">
+                <ul>
+                    <li>
+                        <a href="#">Institucional</a>
+                        <ul>
+                            <li style="" >
+                                <a href="quem-somos/index.html">Quem Somos</a>
+                            </li>
+                            <li>
+                                <a href="nossa-historia/index.html">Nossa História</a>
+                            </li>
+<!--                              <li>
+                                <a href="/pt/nossas-marcas">Nossas Marcas</a>
+                            </li> -->
+                            <!-- <li>
+                                <a href="/pt/fale-com-lactalis">Consumidores</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Produtos</a>
+                        <ul>
+                            <li>
+                                <a href="https://lactalis.com.br/nossas-marcas">Nossas Marcas</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/novidades">Novidades</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Produtor</a>
+                        <ul>
+                            <li>
+                                <a href="https://lactalis.com.br/produtor-lactalis">Produtor Lactalis</a>
+                            </li>
+                             <li>
+                                <a href="https://lactalis.com.br/clube">Clube do Produtor</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/lactaleite">Lactaleite</a>
+                            </li>
+                            <li>
+                                <a href="dicas-do-tecnico/index.html">Dicas do Técnico</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/comunicacao-direta">Comunicação Direta</a>
+                            </li>
+                            <li>
+                                                                    <a target="_blank" href="https://lactalis.com.br/wp-content/files_mf/1675171453PreçopagoaosprodutoresdeLeiteFEVEREIRO23.pdf">
+                                        Preço do Leite                                    </a>
+
+                                                            </li>
+<!--                             <li>
+                                <a href="/convenios"></a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Cliente</a>
+                        <ul>
+                            <li>
+                                <a href="https://boleto.lactalis.com.br/" target="blank">2ª Via de Boleto</a>
+                            </li>
+                            <li>
+                                <a href="http://financas.batavo.com.br/" target="blank">Consulta Pagamentos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Fornecedor</a>
+                        <ul>
+                            <li>
+                                <a href="http://financas.batavo.com.br/" target="blank">Consulta Pagamentos</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+             <a class="logoheader" href="https://lactalis.com.br/"></a>
+             <div style="max-width: 490px;" class="right-site">
+                <div class="menu-right">
+                    <ul>
+                        <li>
+                            <a href="#">Nossa gente</a>
+                            <ul>
+<!--                                <li>
+                                    <a href="/pt/nossas-acoes">Nossas Ações</a>
+                                </li> -->
+                                <li>
+                                    <a href="http://portal.lactalis.com.br/">Portal do Colaborador</a>
+                                </li>
+                                <li>
+                                    <a href="institucional-trabalhe-conosco/index.html">Trabalhe Conosco</a>
+                                </li>
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="#">Notícias</a>
+                            <ul>
+                                <li>
+                                    <a href="noticias-lactalis/indexe363.html?category=lactalis-na-midia">Lactalis na Mídia</a>
+                                </li>
+                                <li>
+                                    <a href="noticias-lactalis/index1cf7.html?category=releases">Releases</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="/pt/noticias-lactalis?category=press-releases">Press Releases</a>
+                                </li> -->
+                                 <li>
+                                    <a href="publicacoes/index.html">Publicações</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="forte-e-responsavel/index.html">Forte & Responsável</a>
+                        </li>
+                        <li><a href="contato/index.html">Contato</a></li>
+                    </ul>
+                </div>                
+                <div class="language-head">
+                                                <a class="braico active" href="https://lactalis.com.br/pt">BRA</a>
+                                                    <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                            <div class="list">
+                                                            <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                                    </div>
+                </div>
+            </div>
+    </header>	<style type="text/css">
+		#banner .owl-item.active a{
+			transform:matrix3d(1.1247, 7.39059e-05, 0, 0, -7.39059e-05, 1.1247, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 0.8); 
+		}
+		#banner .owl-item.active{
+			position: relative;
+			z-index: 5;
+		}
+	</style>
+	<main>
+		<div id="banner" class="banner-owl">
+			<a style='background-image:url(../wp-content/uploads/2023/03/KV-JUSTICEIRAS2-07.png);' target='_blank' href='#'></a><a style='background-image:url(../wp-content/uploads/2018/11/banner1.jpg);' target='_blank' href='https://lactalis.com.br/nossos-produtos/'></a><a style='background-image:url(../wp-content/uploads/2018/11/banner_home_lactalis3-co%cc%81pia.jpg);' target='_blank' href='https://lactalis.com.br/quem-somos'></a>		</div>
+		<div class="section-home" id="blog">
+			<h2>Notícias</h2>
+			<div class="itens">
+										<div class="item" id="3491" >
+							<div class="left" style="background-image: url(../wp-content/uploads/2023/03/O-PREFERIDO-DO-MERCADO.png);"></div>
+							<div class="date">17/03/23</div>
+							<h4 class="titledica">Itambé é eleito o melhor leite condensado do mercado</h4>
+							<div class="text">
+								<p>O leite condensado Itambé foi eleito o melhor do mercado brasileiro em um teste às cegas. Para chegar a esse veredito, o suplemento Paladar, do jornal O Estado de S. Paulo, convocou cinco confeiteiros para avaliarem um brigadeiro feito com oito marcas de leite condensado selecionadas.</p>
+							</div>
+							<a href="https://lactalis.com.br/noticias-lactalis/?post=3491" class="button">
+								ler matéria							</a>
+						</div>
+										<div class="item" id="3488" >
+							<div class="left" style="background-image: url(../wp-content/uploads/2023/03/parceria-lactalis-site.png);"></div>
+							<div class="date">15/03/23</div>
+							<h4 class="titledica">Cooperativa Languiru e Lactalis firmam parceria de captação no RS</h4>
+							<div class="text">
+								<p>A Cooperativa Languiru, de Teutônia (RS), e a Lactalis do Brasil firmaram parceria para potencializar a produção de lácteos no Rio Grande do Sul e ampliar a assistência aos produtores rurais gaúchos. Pelo acordo, a Languiru fornecerá à Lactalis, em um contrato de longo prazo, todo volume de leite in natura de seus produtores rurais, [&hellip;]</p>
+							</div>
+							<a href="https://lactalis.com.br/noticias-lactalis/?post=3488" class="button">
+								ler matéria							</a>
+						</div>
+										<div class="item" id="3485" >
+							<div class="left" style="background-image: url(../wp-content/uploads/2023/03/MicrosoftTeams-image-75-scaled.jpg);"></div>
+							<div class="date">13/03/23</div>
+							<h4 class="titledica">Ação foca no empoderamento feminino para combate à violência</h4>
+							<div class="text">
+								<p>O empoderamento feminino é um dos caminhos apontados como forma de combater a violência contra a mulher no Brasil.</p>
+							</div>
+							<a href="https://lactalis.com.br/noticias-lactalis/?post=3485" class="button">
+								ler matéria							</a>
+						</div>
+							</div>
+		</div>
+		<div class="section-home" id="nossahistoria">
+			<h2>Nossa História</h2>
+			<span>
+				<p style="text-align: center;">Nossa história começa em Laval, na França, no ano de 1933, quando o fundador André Besnier iniciou uma pequena produção de 17 queijos Camembert a partir da coleta de 35 litros de leite. De origem familiar, formação que persiste até hoje, a Lactalis ganhou o mundo ao apostar em uma política de valorização dos parceiros e de respeito ao consumidor. Hoje, a partir de uma pequena queijaria, transformou-se no maior grupo de laticínios do planeta e o segundo maior grupo de produtos alimentícios na França. No Brasil, onde está presente há seis anos, é líder em captação de leite, considerado o número de produtores que lhe assistem diretamente.</p>			</span>
+			<a href="https://lactalis.com.br/nossa-historia">
+				<span>saiba mais</span>
+			</a>
+		</div>
+		<div class="section-home" id="clube-do-produtor">
+			<div class="content">
+				<h2>Clube do Produtor </h2>
+				<div class="text-img">
+					<div style="position: relative;">
+						<img src="../wp-content/uploads/2018/12/produtor.jpg">
+						<div class="descimg"></div>					</div>
+					<div class="text">
+						<h4>Seja um produtor Lactalis</h4>
+						<div>
+							Programa disponibiliza suporte técnico diferenciado e permanente ao homem do campo, garantindo aos associados bons resultados na propriedade						</div>
+						<a href="https://lactalis.com.br/produtor-lactalis"><span>Conhecer Clube</span></a>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+		<div class="section-home" id="galeria"> 
+			<h2>
+			Vale Experimentar	
+			</h2>
+			<div class="galery-controls">
+				<div class="galery">
+									<div class="item-galery" data-post-id="2863" id="2863">
+						<div class="text">
+							<h4>Farofa com queijo Maasdam Président e banana da terra</h4>
+							<div class="resum">
+								<p>A Président preparou essa receita para você saborear e surpreender neste Réveillon.</p>
+							</div>
+							<div class="showrec"><span>ver receita completa</span></div>
+						</div>
+						<div class="imgseffect">
+							<img src="../wp-content/uploads/2018/12/foto_receitas_ok.png">
+						</div>
+						
+					</div>
+									<div class="item-galery" data-post-id="2665" id="2665">
+						<div class="text">
+							<h4>Canudo de massa folhada com doce de leite</h4>
+							<div class="resum">
+								<p>Uma delícia super fácil de preparar para aqueles momentos em que tudo o que queremos é um doce saboroso para degustar!</p>
+							</div>
+							<div class="showrec"><span>ver receita completa</span></div>
+						</div>
+						<div class="imgseffect">
+							<img src="../wp-content/uploads/2018/12/foto_receitas_canudinho.png">
+						</div>
+						
+					</div>
+									<div class="item-galery" data-post-id="2573" id="2573">
+						<div class="text">
+							<h4>Fondue Clássico</h4>
+							<div class="resum">
+								<p>De origem suíça, o fondue de queijo é sempre lembrado quando se quer dar um sabor especial ao inverno.</p>
+							</div>
+							<div class="showrec"><span>ver receita completa</span></div>
+						</div>
+						<div class="imgseffect">
+							<img src="../wp-content/uploads/2018/12/foto_receitas_foundue.png">
+						</div>
+						
+					</div>
+									<div class="item-galery" data-post-id="2572" id="2572">
+						<div class="text">
+							<h4>Camembert Empanado</h4>
+							<div class="resum">
+								<p>Ainda mais delicioso se servido com folhas verdes, conforme dica do chef Olivier Anquier, ou com geleia de frutas vermelhas.</p>
+							</div>
+							<div class="showrec"><span>ver receita completa</span></div>
+						</div>
+						<div class="imgseffect">
+							<img src="../wp-content/uploads/2018/12/foto_receitas_camembert.png">
+						</div>
+						
+					</div>
+									<div class="item-galery" data-post-id="2570" id="2570">
+						<div class="text">
+							<h4>Suflê de Emmental</h4>
+							<div class="resum">
+								<p>Se a intenção é surpreender os convidados, basta seguir o passo a passo desta receita que leva os mais deliciosos ingredientes.  </p>
+							</div>
+							<div class="showrec"><span>ver receita completa</span></div>
+						</div>
+						<div class="imgseffect">
+							<img src="../wp-content/uploads/2018/12/foto_receitas_emmental.png">
+						</div>
+						
+					</div>
+									<div class="item-galery" data-post-id="2568" id="2568">
+						<div class="text">
+							<h4>Risoto de queijos com uvas</h4>
+							<div class="resum">
+								<p>Sugestão do chef gaúcho Joaquim Aita, foi elaborado para o PUB do Queijo, evento promovido pelo Sindicato da Indústria de Laticínios do RS em Esteio (RS).</p>
+							</div>
+							<div class="showrec"><span>ver receita completa</span></div>
+						</div>
+						<div class="imgseffect">
+							<img src="../wp-content/uploads/2018/12/foto_receitas_risoto.png">
+						</div>
+						
+					</div>
+								</div>
+				<div class="customNavigation">
+				  <a class="btn prev"></a>
+				  <a class="btn next"></a>
+				</div>
+			</div>
+		</div>
+		<div  class="section-home" id="marcas">
+			<h2>Nossas Marcas</h2>
+			<div class="itens">
+			<a target='_blank' href='http://www.queijospresident.com.br/'><img src='../wp-content/uploads/2018/11/Pre%cc%81sident.png'/></a><a target='_blank' href='http://www.queijospresident.com.br/'><img src='../wp-content/uploads/2019/01/President_Professional-e1552304407207.jpg'/></a><a target='_blank' href='http://www.parmalat.com.br/'><img src='../wp-content/uploads/2019/01/parmalat_logo-e1550748349226.png'/></a><a target='_blank' href='http://elege.com.br/'><img src='../wp-content/uploads/2018/11/Elege%cc%82.png'/></a><a target='_blank' href='http://www.batavo.com.br/'><img src='../wp-content/uploads/2018/11/Batavo.png'/></a><a target='_blank' href='https://www.itambe.com.br/'><img src='../wp-content/uploads/2020/01/itambe%cc%81-logo.jpg'/></a><a target='_blank' href='http://cotoches.com.br/'><img src='../wp-content/uploads/2018/12/Cotoches-agora-vai.png'/></a><a href='#'><img src='../wp-content/uploads/2018/12/Boa-nata.png'/></a><a target='_blank' href='http://www.galbani.com.br/'><img src='../wp-content/uploads/2018/12/Galbani-teste.png'/></a><a target='_blank' href='http://pocosdecaldasoriginal.com.br/'><img src='../wp-content/uploads/2018/12/Poc%cc%a7os-de-calda.png'/></a><a href='#'><img src='../wp-content/uploads/2018/12/Santa-Rosa.png'/></a><a target='_blank' href='http://dobon.com.br/'><img src='../wp-content/uploads/2018/12/DoBon.png'/></a><a href='#'><img src='../wp-content/uploads/2019/01/logo_societe_lactalis.png'/></a>			</div>
+			<div class="customNavigation">
+			  <a class="btn prev2"></a>
+			  <a class="btn next2"></a>
+			</div>
+		</div>
+				<div class="section-home" id="infos-counter">
+			<h4>Lactalis no Mundo</h4>
+			<div class="itens">
+				<div class="item">
+					<div class="up">
+												<div data-count="1000" class="number count">1000</div><div class="text">milhões</div>
+					</div>
+					<div class="down">idiot... digo, </div>
+					<div class="down">COLABORADORES</div>
+				</div>
+				<div class="item">
+					<div class="up">
+												<div data-count="19" class="number count">19</div> <div class="text">bi</div>
+					</div>
+					<div class="down">Leite coletado/ano</div>
+				</div>
+				<div class="item">
+					<div class="up">
+												<div data-count="250" class="number count">250</div><div class="text"></div>
+					</div>
+					<div class="down">Fábricas</div>
+				</div>
+				<div class="item">
+					<div class="up">
+												<div data-count="88" class="number count">88</div><div class="text"></div>
+					</div>
+					<div class="down">Países</div>
+				</div>
+			</div>
+		</div>
+				<div id="mapa-world">
+			<span>Pau no cú!!</span>
+			<div class="contentmap">
+								<div class="square" style="left:31%; top:72%;">
+						<div class="points"></div>
+						<div class="circles">
+							<div class="line"></div>
+							<div class="pcircle">
+								<div class="center">
+									<div class="close"></div>
+									América do Sul								</div>
+							</div>
+																	<div class="pcircle circle_1">
+											<div class="center">
+												<div class="top">Unidades</div>
+												<div class="bottom">em 7 países</div>
+											</div>
+										</div>
+															</div>
+					</div>
+									<div class="square" style="left:14%; top:31%;">
+						<div class="points"></div>
+						<div class="circles">
+							<div class="line"></div>
+							<div class="pcircle">
+								<div class="center">
+									<div class="close"></div>
+									América do Norte								</div>
+							</div>
+																	<div class="pcircle circle_1">
+											<div class="center">
+												<div class="top">Unidades</div>
+												<div class="bottom">em 3 países</div>
+											</div>
+										</div>
+															</div>
+					</div>
+									<div class="square" style="left:84%; top:76%;">
+						<div class="points"></div>
+						<div class="circles">
+							<div class="line"></div>
+							<div class="pcircle">
+								<div class="center">
+									<div class="close"></div>
+									Oceania								</div>
+							</div>
+																	<div class="pcircle circle_1">
+											<div class="center">
+												<div class="top">Unidades</div>
+												<div class="bottom">em 2 países</div>
+											</div>
+										</div>
+															</div>
+					</div>
+									<div class="square" style="left:72%; top:40%;">
+						<div class="points"></div>
+						<div class="circles">
+							<div class="line"></div>
+							<div class="pcircle">
+								<div class="center">
+									<div class="close"></div>
+									Ásia								</div>
+							</div>
+																	<div class="pcircle circle_1">
+											<div class="center">
+												<div class="top">Unidades</div>
+												<div class="bottom">em 5 Países</div>
+											</div>
+										</div>
+															</div>
+					</div>
+									<div class="square" style="left:51%; top:41%;">
+						<div class="points"></div>
+						<div class="circles">
+							<div class="line"></div>
+							<div class="pcircle">
+								<div class="center">
+									<div class="close"></div>
+									Europa								</div>
+							</div>
+																	<div class="pcircle circle_1">
+											<div class="center">
+												<div class="top">Unidades</div>
+												<div class="bottom">em 26 países</div>
+											</div>
+										</div>
+															</div>
+					</div>
+									<div class="square" style="left:50%; top:62%;">
+						<div class="points"></div>
+						<div class="circles">
+							<div class="line"></div>
+							<div class="pcircle">
+								<div class="center">
+									<div class="close"></div>
+									África								</div>
+							</div>
+																	<div class="pcircle circle_1">
+											<div class="center">
+												<div class="top">Unidades</div>
+												<div class="bottom">em 7 países</div>
+											</div>
+										</div>
+															</div>
+					</div>
+							</div>
+		</div>
+	</main>
+<div class="interna-post receitas">
+	<div class="close"></div>
+				<div class="item 2863">
+				<h4 class="title">Farofa com queijo Maasdam Président e banana da terra</h4>
+				<img width="379" height="345" src="../wp-content/uploads/2018/12/foto_receitas_ok.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_ok.png 379w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_ok-300x273.png 300w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_ok-60x55.png 60w" sizes="(max-width: 379px) 100vw, 379px" />				<div class="creditos"></div>				<div class="text">
+					<h2>Ingredientes</h2>
+<p>1 unidade de banana da terra</p>
+<p>250g de farofa flocada (milho ou aipim)</p>
+<p>50g de bacon em cubinhos</p>
+<p>2 dentes de alho picados</p>
+<p>100g de <strong>manteiga Gastronomique Président</strong></p>
+<p>1 colher de sopa de cebolinha picada</p>
+<p>250g de <strong>queijo  Maasdam Président</strong></p>
+<p>Sal a gosto/opcional pimenta biquinho</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>MODO DE PREPARO</h2>
+<p>Numa panela, fritar o bacon com a manteiga até ficar levemente dourado</p>
+<p>Adicionar o alho picado e a banana da terra cortada em rodelinhas bem finas</p>
+<p>Refogar e mexer sem parar em fogo médio</p>
+<p>Adicionar a farofa, misturando e refogando até ficar crocante</p>
+<p>Antes de servir, adicionar o queijo Maasdam Président cortado em cubinhos bem pequenos, com o fogo já desligado</p>
+<p>Finalize misturando a cebolinha e sirva em seguida</p>
+<p>Serve 4 pessoas</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+				<div class="item 2665">
+				<h4 class="title">Canudo de massa folhada com doce de leite</h4>
+				<img width="379" height="345" src="../wp-content/uploads/2018/12/foto_receitas_canudinho.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_canudinho.png 379w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_canudinho-300x273.png 300w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_canudinho-60x55.png 60w" sizes="(max-width: 379px) 100vw, 379px" />				<div class="creditos">Canudo de massa folhada com doce de leite</div>				<div class="text">
+					<h2>Ingredientes</h2>
+<p>1 kg de farinha de trigo especial</p>
+<p>15 g de sal refinado</p>
+<p>30 g de açúcar refinado</p>
+<p>44 g de manteiga Président para a massa</p>
+<p>546 g de manteiga Président para a laminação</p>
+<p>500 g de água gelada (5ºC)</p>
+<p>1,590 kg de doce de leite Elegê para o recheio</p>
+<p>1 ovo para pincelar</p>
+<h2></h2>
+<h2>Modo de preparo</h2>
+<p><em><strong>Para a massa<br />
+</strong></em><img class="alignnone size-medium wp-image-2711" src="../../dev.lactalis.astrusweb.dataware.com.br/wp-content/uploads/2018/12/01-canudinho-300x169.png" alt="canudinho" width="300" height="169" srcset="https://lactalis.com.br/wp-content/uploads/2018/12/01-canudinho-300x169.png 300w, https://lactalis.com.br/wp-content/uploads/2018/12/01-canudinho-768x433.png 768w, https://lactalis.com.br/wp-content/uploads/2018/12/01-canudinho-60x34.png 60w, https://lactalis.com.br/wp-content/uploads/2018/12/01-canudinho.png 923w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Em uma amassadeira, coloque a água, dissolva o sal e o açúcar. Adicione a farinha de trigo e amasse. Após a hidratação da massa, adicione a manteiga e trabalhe a massa até que fique lisa e homogênea. Divida o peso da massa, formando uma bola uniforme, e deixe descansar durante 30 minutos, cobrindo com um plástico para que não resseque. A temperatura ideal da massa é de 20°C a 25°C, e a temperatura ambiente ideal para o trabalho, entre 15°C e 20°C.</p>
+<p><em><strong>Para as dobras</strong></em></p>
+<p>Achate as barras de manteiga de maneira que formem retângulos finos, sem deixar bordas desparelhas. Após o descanso de 30 minutos da massa, abra-a sobre uma superfície enfarinhada usando um rolo até que fique bem fina, em formato retangular. Disponha os retângulos de manteiga no centro do retângulo de massa e feche com a massa, como se fosse um “pacote”. Deixe descansar por 15 minutos.</p>
+<p>Estique a massa com o rolo, faça a primeira dobra simples e deixe descansar por 15 minutos em ambiente refrigerado (entre 5°C e 15°C). A massa deve ser coberta com plástico, para evitar o ressecamento. Após a pausa, estique a massa novamente com o rolo, faça a primeira dobra dupla, cubra com o plástico e deixe descansar por mais 15 minutos sob a mesma temperatura anterior.</p>
+<p>Repita os procedimentos, fazendo a segunda dobra simples (seguida de pausa) e a segunda dobra dupla. Armazene a massa sob refrigeração para uso próximo ou congele para uso posterior, sempre protegida em saco plástico.</p>
+<p><em><strong>Para os canudos<br />
+<img class="alignnone size-medium wp-image-2712" src="../../dev.lactalis.astrusweb.dataware.com.br/wp-content/uploads/2018/12/canudinho-em-preparo-3-300x200.jpg" alt="canudinho em preparo 3" width="300" height="200" srcset="https://lactalis.com.br/wp-content/uploads/2018/12/canudinho-em-preparo-3-300x200.jpg 300w, https://lactalis.com.br/wp-content/uploads/2018/12/canudinho-em-preparo-3-768x512.jpg 768w, https://lactalis.com.br/wp-content/uploads/2018/12/canudinho-em-preparo-3-1024x683.jpg 1024w, https://lactalis.com.br/wp-content/uploads/2018/12/canudinho-em-preparo-3-60x40.jpg 60w" sizes="(max-width: 300px) 100vw, 300px" /><br />
+</strong></em></p>
+<p>Afine a massa com o rolo até que fique com 0,8 cm de espessura. Corte em tiras de 30 cm de comprimento por 1,5 cm de largura e enrole usando as formas para canudinhos. Pincele com o ovo batido e asse em forno quente (180°C a 200°C ) de 12 a 14 minutos. Deixe esfriar e recheie com o doce de leite. Decore com açúcar de confeiteiro.</p>
+<p>Rende 106 unidades de 15 g cada!</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+				<div class="item 2573">
+				<h4 class="title">Fondue Clássico</h4>
+				<img width="379" height="345" src="../wp-content/uploads/2018/12/foto_receitas_foundue.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_foundue.png 379w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_foundue-300x273.png 300w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_foundue-60x55.png 60w" sizes="(max-width: 379px) 100vw, 379px" />				<div class="creditos">Fondue Clássico</div>				<div class="text">
+					<h2>Ingredientes</h2>
+<p>1 dente de alho</p>
+<p>400g de queijo emmental Président</p>
+<p>100 g de queijo mussarela Président</p>
+<p>100 ml de vinho branco seco</p>
+<p>noz-moscada</p>
+<p>pimenta-preta</p>
+<p>&nbsp;</p>
+<h2>Modo de preparo</h2>
+<p>Em uma panela própria para fondue, esfregue o dente de alho descascado.</p>
+<p>Coloque os dois queijos (emmental e mussarela) na panela juntamente com o vinho branco.</p>
+<p>Cozinhe em fogo baixo, sempre mexendo, para que não grude no fundo.</p>
+<p>Quando a mistura estiver homogênea, tempere com noz-moscada e pimenta-preta moídas na hora.</p>
+<p>Coloque no réchaud de fondue.</p>
+<p>Dica: sirva com batatinha calabresa com casca cozida somente com sal, linguiça campeira em pedaços e goiabada-cascão envolta em açúcar.</p>
+<p>A receita harmoniza com vinhos chardonnay encorpado e amadeirado, sauvignon blanc e merlot.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+				<div class="item 2572">
+				<h4 class="title">Camembert Empanado</h4>
+				<img width="379" height="345" src="../wp-content/uploads/2018/12/foto_receitas_camembert.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_camembert.png 379w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_camembert-300x273.png 300w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_camembert-60x55.png 60w" sizes="(max-width: 379px) 100vw, 379px" />				<div class="creditos">Camembert Empanado</div>				<div class="text">
+					<h2>Ingredientes</h2>
+<p>4 queijos camembert Président</p>
+<p>8 colheres de sopa de farinha de rosca</p>
+<p>2 ovos batidos com garfo</p>
+<p>2 colheres de sopa de manteiga Président</p>
+<p>1 colher de sopa de óleo de canola</p>
+<h2> Modo de preparo</h2>
+<p>Como uma milanesa, pincele os queijos com os ovos batidos e passe-os na farinha de rosca.</p>
+<p>Em uma frigideira, aqueça o óleo de canola e a manteiga.</p>
+<p>Frite os queijos já empanados em fogo baixo, até que fiquem dourados de todos os lados e pareçam estufados, sem que a crosta de farinha de rosca fique queimada.</p>
+<p>Sirva com folhas verdes de sua preferência (dica do chef Olivier Anquier: manjericão, hortelã, sálvia e salsinha) ou com geleia de frutas vermelhas.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+				<div class="item 2570">
+				<h4 class="title">Suflê de Emmental</h4>
+				<img width="379" height="345" src="../wp-content/uploads/2018/12/foto_receitas_emmental.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_emmental.png 379w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_emmental-300x273.png 300w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_emmental-60x55.png 60w" sizes="(max-width: 379px) 100vw, 379px" />				<div class="creditos">Suflê de Emmental</div>				<div class="text">
+					<h2>Ingredientes</h2>
+<p>200 g de queijo emmental Président</p>
+<p>1 lata de milho verde escorrido</p>
+<p>300 g de bacon</p>
+<p>200 ml de leite Elegê</p>
+<p>4 ovos</p>
+<p>2 colheres de manteiga Président</p>
+<p>(mais manteiga para untar)</p>
+<p>1 colher de chá de fermento em pó</p>
+<p>sal e pimenta do reino a gosto</p>
+<h2>Modo de preparo</h2>
+<p>Frite o bacon em cubos e reserve.</p>
+<p>Separe as claras, bata em neve e reserve.</p>
+<p>No liquidificador, bata o leite, o milho, as gemas e a manteiga.</p>
+<p>Misture as claras em neve à base de milho e acrescente o queijo emmental ralado, o bacon e o fermento.</p>
+<p>Unte os ramekins (ou potinhos de cerâmica resistentes a altas temperaturas) com manteiga, completando-os com a mistura do suflê.</p>
+<p>Asse por cerca de 15 minutos ou até dourar</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+				<div class="item 2568">
+				<h4 class="title">Risoto de queijos com uvas</h4>
+				<img width="379" height="345" src="../wp-content/uploads/2018/12/foto_receitas_risoto.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_risoto.png 379w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_risoto-300x273.png 300w, https://lactalis.com.br/wp-content/uploads/2018/12/foto_receitas_risoto-60x55.png 60w" sizes="(max-width: 379px) 100vw, 379px" />				<div class="creditos">Risoto de Queijo com Uvas</div>				<div class="text">
+					<h2>Ingredientes</h2>
+<p>(Porção para duas pessoas)</p>
+<p>200g arroz arbóreo</p>
+<p>30g de gorgonzola Boa Nata</p>
+<p>5 bagos de uva cortados ao meio sem semente</p>
+<p>20g de parmesão Président ralado na hora</p>
+<p>1 cálice de vinho branco seco</p>
+<p>Sal</p>
+<p>Pimenta do reino</p>
+<p>Azeite de oliva</p>
+<p>½ Cebola picada</p>
+<p>Caldo de legumes</p>
+<h2>Modo de preparo</h2>
+<p>Leve a panela ao fogo com um pouco de azeite de oliva e com as cebolas picadas.</p>
+<p>Deixe dourar e, então, acrescente o arroz arbóreo com sal. Frite bem.</p>
+<p>Em seguida, acrescente o vinho branco e deixe evaporar.</p>
+<p>Junte o caldo de legumes aos poucos e mexa sempre para cozinhar parelho.</p>
+<p>Quando o arroz estiver quase pronto, acrescente o queijo gorgonzola e siga mexendo.</p>
+<p>Não deixe seu risoto secar.</p>
+<p>Em seguida, adicione as uvas, corrija o sal e acrescente pimenta do reino a gosto.</p>
+<p>Para finalizar, use o queijo ralado.</p>
+<p>Sirva o risoto bem cremoso.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+	</div>
+<footer>
+	<div class="content">
+		<div class="top-side">
+			<div class="spaces">
+				<span>
+					Fique por dentro das novidades				</span>
+				<div class="news">
+														</div>
+			</div>
+			<div class="right-side">
+				<div class="left">
+					<li><a href="quem-somos/index.html">Institucional</a></li>
+                    <li><a href="nossas-marcas/index.html">Produtos</a></li>
+                    <li><a href="produtor-lactalis/index.html">Produtor</a></li>
+				 	<li><a href="noticias-lactalis/index.html">Notícias</a></li>
+				 	<li><a href="institucional-trabalhe-conosco/index.html">Nossa gente</a></li>
+                    <li><a href="contato/index.html">Contato</a></li>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-side">
+						<a class="logo" href="https://lactalis.com.br/"></a>
+			<a class="logoastrusft" href="http://astrusweb.com.br/"></a>
+			<div class="redes">
+							</div>
+		</div>
+		
+	</div>
+</footer>
+
+  <!--copyscapeskip-->
+  <aside id="moove_gdpr_cookie_info_bar" class="moove-gdpr-info-bar-hidden moove-gdpr-align-center moove-gdpr-light-scheme gdpr_infobar_postion_bottom" role="note" aria-label="GDPR Cookie Banner" style="display: none;">
+    <div class="moove-gdpr-info-bar-container">
+      <div class="moove-gdpr-info-bar-content">
+        
+<div class="moove-gdpr-cookie-notice">
+  <p>Utilizamos ferramentas e serviços de terceiros que utilizam cookies.<br />
+Essas ferramentas nos ajudam a oferecer uma melhor experiência de navegação no site.</p>
+<p>Ao clicar no botão "Aceitar" você concorda com o uso de cookies em nosso site. <span role="link"  tabindex="1"  data-href="#moove_gdpr_cookie_modal" class="change-settings-button">Configurações</span></p>
+<p><span style="font-size: 11pt;"> </span></p>
+</div>
+<!--  .moove-gdpr-cookie-notice -->        
+<div class="moove-gdpr-button-holder">
+		  <button class="mgbutton moove-gdpr-infobar-allow-all gdpr-fbo-0" aria-label="Aceitar"  tabindex="1"  role="button">Aceitar</button>
+	  </div>
+<!--  .button-container -->      </div>
+      <!-- moove-gdpr-info-bar-content -->
+    </div>
+    <!-- moove-gdpr-info-bar-container -->
+  </aside>
+  <!-- #moove_gdpr_cookie_info_bar -->
+  <!--/copyscapeskip-->
+<script type='text/javascript' src='../wp-content/themes/astrusweb/assets/js/vendor.js'></script>
+<script type='text/javascript' src='../../cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+<script type='text/javascript' src='../wp-content/themes/astrusweb/assets/js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js'></script>
+<script type='text/javascript' src='../wp-content/themes/astrusweb/assets/js/modernizr-2.6.2.min4e44.js?ver=1.3'></script>
+<script type='text/javascript' src='../wp-content/themes/astrusweb/assets/js/add-to-homescreen4e44.js?ver=1.3'></script>
+<script type='text/javascript' src='../wp-content/themes/astrusweb/assets/js/login73ad.js?ver=0.0'></script>
+<script type='text/javascript' src='../wp-content/themes/astrusweb/assets/js/default73ad.js?ver=0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var moove_frontend_gdpr_scripts = {"ajaxurl":"https:\/\/lactalis.com.br\/wp-admin\/admin-ajax.php","post_id":"3413","plugin_dir":"https:\/\/lactalis.com.br\/wp-content\/plugins\/gdpr-cookie-compliance","show_icons":"all","is_page":"","strict_init":"1","enabled_default":{"third_party":0,"advanced":0},"geo_location":"false","force_reload":"false","is_single":"","hide_save_btn":"false","current_user":"0","cookie_expiration":"365","script_delay":"2000","close_btn_action":"1","close_cs_action":"1","scripts_defined":"{\"cache\":true,\"header\":\"\",\"body\":\"\",\"footer\":\"\",\"thirdparty\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"},\"advanced\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"}}","gdpr_scor":"true","wp_lang":"_pt"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main5859.js?ver=4.9.1'></script>
+<script type='text/javascript'>
+var gdpr_consent__strict = "false"
+var gdpr_consent__thirdparty = "false"
+var gdpr_consent__advanced = "false"
+var gdpr_consent__cookies = ""
+</script>
+<script type='text/javascript' src='../wp-includes/js/wp-embedc225.js?ver=5.4.1'></script>
+
+    
+  <!--copyscapeskip-->
+  <!-- V1 -->
+  <div id="moove_gdpr_cookie_modal" class="gdpr_lightbox-hide" role="complementary" aria-label="GDPR Settings Screen">
+    <div class="moove-gdpr-modal-content moove-clearfix logo-position-left moove_gdpr_modal_theme_v1">
+          
+        <button class="moove-gdpr-modal-close" aria-label="Close GDPR Cookie Settings">
+          <span class="gdpr-sr-only">Close GDPR Cookie Settings</span>
+          <span class="gdpr-icon moovegdpr-arrow-close"></span>
+        </button>
+            <div class="moove-gdpr-modal-left-content">
+        
+<div class="moove-gdpr-company-logo-holder">
+  <img src="../wp-content/uploads/2019/01/logo_lactalis_brasil-300x100.png" alt=""   width="300"  height="100"  class="img-responsive" />
+</div>
+<!--  .moove-gdpr-company-logo-holder -->        <ul id="moove-gdpr-menu">
+          
+<li class="menu-item-on menu-item-privacy_overview menu-item-selected">
+  <button data-href="#privacy_overview" class="moove-gdpr-tab-nav" aria-label="Visão geral de privacidade">
+    <span class="gdpr-nav-tab-title">Visão geral de privacidade</span>
+  </button>
+</li>
+
+  <li class="menu-item-strict-necessary-cookies menu-item-off">
+    <button data-href="#strict-necessary-cookies" class="moove-gdpr-tab-nav" aria-label="Cookies estritamente necessários">
+      <span class="gdpr-nav-tab-title">Cookies estritamente necessários</span>
+    </button>
+  </li>
+
+
+
+
+        </ul>
+        
+<div class="moove-gdpr-branding-cnt">
+  
+		<a href="https://wordpress.org/plugins/gdpr-cookie-compliance/" target="_blank" rel="noopener noreferrer nofollow" class='moove-gdpr-branding'>Distribuído por&nbsp; <span>GDPR Cookie Compliance</span></a>
+		</div>
+<!--  .moove-gdpr-branding -->      </div>
+      <!--  .moove-gdpr-modal-left-content -->
+      <div class="moove-gdpr-modal-right-content">
+        <div class="moove-gdpr-modal-title">
+           
+        </div>
+        <!-- .moove-gdpr-modal-ritle -->
+        <div class="main-modal-content">
+
+          <div class="moove-gdpr-tab-content">
+            
+<div id="privacy_overview" class="moove-gdpr-tab-main">
+      <span class="tab-title">Visão geral de privacidade</span>
+    <div class="moove-gdpr-tab-main-content">
+  	<p>Este site usa cookies para que possamos oferecer a melhor experiência de usuário possível. As informações de cookies são armazenadas em seu navegador e executam funções como reconhecê-lo quando você retorna ao nosso site e ajudar nossa equipe a entender quais seções do site você considera mais interessantes e úteis.</p>
+  	  </div>
+  <!--  .moove-gdpr-tab-main-content -->
+
+</div>
+<!-- #privacy_overview -->            
+  <div id="strict-necessary-cookies" class="moove-gdpr-tab-main" style="display:none">
+    <span class="tab-title">Cookies estritamente necessários</span>
+    <div class="moove-gdpr-tab-main-content">
+      <p>O cookie estritamente necessário deve estar ativado o tempo todo para que possamos salvar suas preferências de configuração de cookies.</p>
+      <div class="moove-gdpr-status-bar ">
+        <div class="gdpr-cc-form-wrap">
+          <div class="gdpr-cc-form-fieldset">
+            <label class="cookie-switch" for="moove_gdpr_strict_cookies">    
+              <span class="gdpr-sr-only">Enable or Disable Cookies</span>        
+              <input type="checkbox" aria-label="Cookies estritamente necessários"  value="check" name="moove_gdpr_strict_cookies" id="moove_gdpr_strict_cookies">
+              <span class="cookie-slider cookie-round" data-text-enable="Habilitado" data-text-disabled="Desabilitado"></span>
+            </label>
+          </div>
+          <!-- .gdpr-cc-form-fieldset -->
+        </div>
+        <!-- .gdpr-cc-form-wrap -->
+      </div>
+      <!-- .moove-gdpr-status-bar -->
+              <div class="moove-gdpr-strict-warning-message" style="margin-top: 10px;">
+          <p>Se você desativar este cookie, não poderemos salvar suas preferências. Isso significa que toda vez que você visitar este site, precisará habilitar ou desabilitar os cookies novamente.</p>
+        </div>
+        <!--  .moove-gdpr-tab-main-content -->
+                                              
+    </div>
+    <!--  .moove-gdpr-tab-main-content -->
+  </div>
+  <!-- #strict-necesarry-cookies -->
+            
+            
+            
+          </div>
+          <!--  .moove-gdpr-tab-content -->
+        </div>
+        <!--  .main-modal-content -->
+        <div class="moove-gdpr-modal-footer-content">
+          <div class="moove-gdpr-button-holder">
+			  		<button class="mgbutton moove-gdpr-modal-allow-all button-visible" role="button" aria-label="Habilitar todos">Habilitar todos</button>
+		  					<button class="mgbutton moove-gdpr-modal-save-settings button-visible" role="button" aria-label="Salvar Mudanças">Salvar Mudanças</button>
+				</div>
+<!--  .moove-gdpr-button-holder -->        </div>
+        <!--  .moove-gdpr-modal-footer-content -->
+      </div>
+      <!--  .moove-gdpr-modal-right-content -->
+
+      <div class="moove-clearfix"></div>
+
+    </div>
+    <!--  .moove-gdpr-modal-content -->
+  </div>
+  <!-- #moove_gdpr_cookie_modal -->
+  <!--/copyscapeskip-->
+</body>
+
+<!-- Mirrored from lactalis.com.br/pt/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Apr 2023 05:23:24 GMT -->
+</html>

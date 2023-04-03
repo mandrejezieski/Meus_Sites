@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lactalis.com.br/pt/noticias-lactalis/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Apr 2023 05:24:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+            <title>Notícias | </title>
+        <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta charset="UTF-8">
+    <meta name="host" content="https://lactalis.com.br/">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="apple-touch-icon" href="../../wp-content/themes/astrusweb/ios_icon.html" />
+    <link rel="shortcut icon" href="../../wp-content/themes/astrusweb/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Reenie+Beanie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+    <script type="text/javascript" src="../../wp-content/themes/astrusweb/assets/js/textDimensions.js"></script>
+           <meta property='og:image' content=''/>    <link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/lactalis.com.br\/wp-includes\/js\/wp-emoji.js?ver=5.4.1","twemoji":"https:\/\/lactalis.com.br\/wp-includes\/js\/twemoji.js?ver=5.4.1"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../wp-includes/css/dist/block-library/stylec225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vendor-css'  href='../../wp-content/themes/astrusweb/assets/css/vendorc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='../../wp-content/themes/astrusweb/stylec225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='add-to-homescreen-css'  href='../../wp-content/themes/astrusweb/assets/css/add-to-homescreenc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='../../wp-content/themes/astrusweb/assets/css/mainc225.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Ubuntu-css'  href='https://fonts.googleapis.com/css?family=Ubuntu%3A300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i&amp;ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Roboto-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C700%2C700i%2C900%2C900i&amp;ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='moove_gdpr_frontend-css'  href='../../wp-content/plugins/gdpr-cookie-compliance/dist/styles/gdpr-main5859.css?ver=4.9.1' type='text/css' media='all' />
+<style id='moove_gdpr_frontend-inline-css' type='text/css'>
+#moove_gdpr_cookie_modal,#moove_gdpr_cookie_info_bar,.gdpr_cookie_settings_shortcode_content{font-family:Nunito,sans-serif}#moove_gdpr_save_popup_settings_button{background-color:#373737;color:#fff}#moove_gdpr_save_popup_settings_button:hover{background-color:#000}#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton,#moove_gdpr_cookie_info_bar .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton{background-color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green{background-color:#52b5de;border-color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder a.mgbutton:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-footer-content .moove-gdpr-button-holder button.mgbutton:hover,.gdpr_cookie_settings_shortcode_content .gdpr-shr-button.button-green:hover{background-color:#fff;color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon{background-color:#52b5de;border:1px solid #52b5de}#moove_gdpr_cookie_info_bar span.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar span.change-settings-button:focus{-webkit-box-shadow:0 0 1px 3px #52b5de;-moz-box-shadow:0 0 1px 3px #52b5de;box-shadow:0 0 1px 3px #52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close i:hover,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close span.gdpr-icon:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button{color:#52b5de}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li.menu-item-selected button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a span.gdpr-icon,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button span.gdpr-icon{color:inherit}#moove_gdpr_cookie_modal .gdpr-acc-link{line-height:0;font-size:0;color:transparent;position:absolute}#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-close:hover i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li button i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-modal-left-content #moove-gdpr-menu li a i,#moove_gdpr_cookie_modal .moove-gdpr-modal-content .moove-gdpr-tab-main .moove-gdpr-tab-main-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button:hover,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:hover,#moove_gdpr_cookie_info_bar span[data-href]>u.change-settings-button,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button.mgbutton:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content a:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content span.change-settings-button.focus-g,span.change-settings-button:focus,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button.focus-g,#moove_gdpr_cookie_info_bar.moove-gdpr-dark-scheme .moove-gdpr-info-bar-container .moove-gdpr-info-bar-content u.change-settings-button:focus{color:#52b5de}#moove_gdpr_cookie_modal.gdpr_lightbox-hide{display:none}
+</style>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate330a.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://lactalis.com.br/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lactalis.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://lactalis.com.br/wp-includes/wlwmanifest.xml" /> 
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://lactalis.com.br/?p=2533' />
+<link rel="alternate" type="application/json+oembed" href="https://lactalis.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flactalis.com.br%2Fpt%2Fnoticias-lactalis%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://lactalis.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flactalis.com.br%2Fpt%2Fnoticias-lactalis%2F&amp;format=xml" />
+<link rel="alternate" href="index.html" hreflang="pt" />
+<link rel="alternate" href="https://lactalis.com.br/fr/nouvelles-lactalis/" hreflang="fr" />
+    <meta property='og:image' content=''/>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBVSS2W');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBVSS2W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        <nav class="responsive-nav">
+        <div class="centerli">
+            <li>
+                 <div class="openlist">Institucional</div>
+                <ul>
+                    <li>
+                        <a href="../quem-somos/index.html">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="../nossa-historia/index.html">Nossa História</a>
+                    </li>
+<!--                     <li>
+                        <a href="/pt/nossas-marcas">Nossas Marcas</a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="/pt/fale-com-lactalis">Consumidores</a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
+                 <div class="openlist">Produtos</div>
+                <ul>
+                    <li>
+                        <a href="https://lactalis.com.br/nossas-marcas">Nossas Marcas</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/novidades">Novidades</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Produtor</div>
+                <ul>
+                    <li>
+                        <a href="https://lactalis.com.br/produtor-lactalis">Produtor Lactalis</a>
+                    </li>
+                     <li>
+                        <a href="https://lactalis.com.br/clube">Clube do Produtor</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/lactaleite">Lactaleite</a>
+                    </li>
+                    <li>
+                        <a href="../dicas-do-tecnico/index.html">Dicas do Técnico</a>
+                    </li>
+                    <li>
+                        <a href="https://lactalis.com.br/comunicacao-direta">Comunicação Direta</a>
+                    </li>
+                    <li>
+                                                    <a target="_blank" href="https://lactalis.com.br/wp-content/files_mf/1675171453PreçopagoaosprodutoresdeLeiteFEVEREIRO23.pdf">
+                                Preço do Leite                            </a>
+
+                                            </li>
+<!--                     <li>
+                        <a href="/convenios">Convênios</a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Nossa gente</div>
+                <ul>
+<!--                     <li>
+                        <a href="/pt/nossas-acoes">Nossas Ações</a>
+                    </li> -->
+                    <li>
+                        <a href="http://portal.lactalis.com.br/">Portal do Colaborador</a>
+                    </li>
+                    <li>
+                        <a href="../institucional-trabalhe-conosco/index.html">Trabalhe Conosco</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="openlist">Notícias</div>
+                <ul>
+
+                    <li>
+                        <a href="indexe363.html?category=lactalis-na-midia">Lactalis na Mídia</a>
+                    </li>
+                    <li>
+                        <a href="index1cf7.html?category=releases">Releases</a>
+                    </li>
+                    <!-- <li>
+                        <a href="/pt/noticias-lactalis?category=press-releases">Press Releases</a>
+                    </li> -->
+                     <li>
+                        <a href="../publicacoes/index.html">Publicações</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="openlist" href="../forte-e-responsavel/index.html">Forte & Responsável</a>
+            </li>
+            <li><a class="openlist" href="../contato/index.html">Contato</a></li>
+
+           <div class="language-head">
+                                        <a class="braico active" href="https://lactalis.com.br/pt">BRA</a>
+                                                <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                    </div>
+            <div class="close">
+                
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div style="max-width: 1200px;" class="content">
+            <div class="pushymain">
+                <div class="hambmain">
+                    <div></div>
+                </div>
+            </div>
+            <div style="max-width: 490px;" class="menu-left">
+                <ul>
+                    <li>
+                        <a href="#">Institucional</a>
+                        <ul>
+                            <li style="" >
+                                <a href="../quem-somos/index.html">Quem Somos</a>
+                            </li>
+                            <li>
+                                <a href="../nossa-historia/index.html">Nossa História</a>
+                            </li>
+<!--                              <li>
+                                <a href="/pt/nossas-marcas">Nossas Marcas</a>
+                            </li> -->
+                            <!-- <li>
+                                <a href="/pt/fale-com-lactalis">Consumidores</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Produtos</a>
+                        <ul>
+                            <li>
+                                <a href="https://lactalis.com.br/nossas-marcas">Nossas Marcas</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/novidades">Novidades</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Produtor</a>
+                        <ul>
+                            <li>
+                                <a href="https://lactalis.com.br/produtor-lactalis">Produtor Lactalis</a>
+                            </li>
+                             <li>
+                                <a href="https://lactalis.com.br/clube">Clube do Produtor</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/lactaleite">Lactaleite</a>
+                            </li>
+                            <li>
+                                <a href="../dicas-do-tecnico/index.html">Dicas do Técnico</a>
+                            </li>
+                            <li>
+                                <a href="https://lactalis.com.br/comunicacao-direta">Comunicação Direta</a>
+                            </li>
+                            <li>
+                                                                    <a target="_blank" href="https://lactalis.com.br/wp-content/files_mf/1675171453PreçopagoaosprodutoresdeLeiteFEVEREIRO23.pdf">
+                                        Preço do Leite                                    </a>
+
+                                                            </li>
+<!--                             <li>
+                                <a href="/convenios"></a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Cliente</a>
+                        <ul>
+                            <li>
+                                <a href="https://boleto.lactalis.com.br/" target="blank">2ª Via de Boleto</a>
+                            </li>
+                            <li>
+                                <a href="http://financas.batavo.com.br/" target="blank">Consulta Pagamentos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Fornecedor</a>
+                        <ul>
+                            <li>
+                                <a href="http://financas.batavo.com.br/" target="blank">Consulta Pagamentos</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+             <a class="logoheader" href="https://lactalis.com.br/"></a>
+             <div style="max-width: 490px;" class="right-site">
+                <div class="menu-right">
+                    <ul>
+                        <li>
+                            <a href="#">Nossa gente</a>
+                            <ul>
+<!--                                <li>
+                                    <a href="/pt/nossas-acoes">Nossas Ações</a>
+                                </li> -->
+                                <li>
+                                    <a href="http://portal.lactalis.com.br/">Portal do Colaborador</a>
+                                </li>
+                                <li>
+                                    <a href="../institucional-trabalhe-conosco/index.html">Trabalhe Conosco</a>
+                                </li>
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="#">Notícias</a>
+                            <ul>
+                                <li>
+                                    <a href="indexe363.html?category=lactalis-na-midia">Lactalis na Mídia</a>
+                                </li>
+                                <li>
+                                    <a href="index1cf7.html?category=releases">Releases</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="/pt/noticias-lactalis?category=press-releases">Press Releases</a>
+                                </li> -->
+                                 <li>
+                                    <a href="../publicacoes/index.html">Publicações</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../forte-e-responsavel/index.html">Forte & Responsável</a>
+                        </li>
+                        <li><a href="../contato/index.html">Contato</a></li>
+                    </ul>
+                </div>                
+                <div class="language-head">
+                                                <a class="braico active" href="https://lactalis.com.br/pt">BRA</a>
+                                                    <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                            <div class="list">
+                                                            <a class="fraico " href="https://lactalis.com.br/fr">FRA</a>
+                                                    </div>
+                </div>
+            </div>
+    </header><style type="text/css">
+	body{
+		background-image: url(../../wp-content/themes/astrusweb/assets/images/backgroundanother.png) ,url(https://lactalis.com.br/wp-content/themes/astrusweb/assets/images/bakcgorundnovidade.png) , url(https://lactalis.com.br/wp-content/themes/astrusweb/assets/images/backgroundanotherone.png);
+		background-position:110% 50px , right 1700px , -70px 1000px;
+		background-repeat: no-repeat;
+		background-size: initial;
+	}
+</style>
+<main class="pages-lactalis" id="dicas-tecnico">
+	<div class="topside">
+		<h4 class="title">Notícias</h4>
+		<form action="#" name="search" method="GET">
+			<input id="text-search" type="text" name="texto" placeholder="faça uma busca">
+			<input type="submit" value="Buscar">
+		</form>
+	</div>
+		<div class="posts-area">
+						<div class="item" id="3491" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2023/03/O-PREFERIDO-DO-MERCADO.png);"></div>
+												
+					<div class="date">17/03/23	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Itambé é eleito o melhor leite condensado do mercado</h4>
+					<div class="text">
+						<p>O leite condensado Itambé foi eleito o melhor do mercado brasileiro em um teste às cegas. Para chegar a esse veredito, o suplemento Paladar, do jornal O Estado de S. Paulo, convocou cinco confeiteiros para avaliarem um brigadeiro feito com oito marcas de leite condensado selecionadas.</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3488" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2023/03/parceria-lactalis-site.png);"></div>
+												
+					<div class="date">15/03/23	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Cooperativa Languiru e Lactalis firmam parceria de captação no RS</h4>
+					<div class="text">
+						<p>A Cooperativa Languiru, de Teutônia (RS), e a Lactalis do Brasil firmaram parceria para potencializar a produção de lácteos no Rio Grande do Sul e ampliar a assistência aos produtores rurais gaúchos. Pelo acordo, a Languiru fornecerá à Lactalis, em um contrato de longo prazo, todo volume de leite in natura de seus produtores rurais, [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3485" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2023/03/MicrosoftTeams-image-75-scaled.jpg);"></div>
+												
+					<div class="date">13/03/23	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Ação foca no empoderamento feminino para combate à violência</h4>
+					<div class="text">
+						<p>O empoderamento feminino é um dos caminhos apontados como forma de combater a violência contra a mulher no Brasil.</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3470" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2023/03/IMG_0330.jpg);"></div>
+												
+					<div class="date">08/03/23	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Caixinhas de leite na luta contra a violência à mulher</h4>
+					<div class="text">
+						<p>Parmalat, Elegê, Batavo e Itambé unem-se às Justiceiras e lançam canal de acolhimento Quatro das maiores marcas de leite do mercado brasileiro uniram-se em uma ofensiva nacional contra a violência à mulher. Em parceria com a equipe do Projeto Justiceiras, Parmalat, Elegê, Batavo e Itambé lançam, neste dia 8 de março, um canal único de [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3465" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-09.37.16.jpg);"></div>
+												
+					<div class="date">16/02/23	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Poços de Caldas está no pódio entre os melhores requeijões do mercado</h4>
+					<div class="text">
+						<p>O requeijão Poços de Caldas está no pódio entre os melhores requeijões do mercado, segundo o suplemento Paladar, do jornal O Estado de S. Paulo, o produto foi eleito o terceiro melhor do mercado. Para formar o ranking foram convidados cinco especialistas que avaliaram as principais marcas vendidas. Das 12 avaliadas, o objetivo era encontrar [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3447" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2022/12/Patrick_Sauvageot_creditoPedroMachado_44meia.png);"></div>
+												
+					<div class="date">14/12/22	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">LACTALIS DO BRASIL FIRMA ACORDO COM FONTERRA E NESTLÉ PARA ADQUIRIR A DPA BRASIL E GERENCIAR A FABRICAÇÃO DE PRODUTOS REFRIGERADOS NESTLÉ NO BRASIL</h4>
+					<div class="text">
+						<p>A Lactalis do Brasil chegou a um acordo para adquirir a DPA Brasil (Dairy Partners America), joint venture criada entre a Fonterra e a Nestlé em 2003 para fabricar e comercializar produtos lácteos em toda a América Latina. Em 2013, a joint venture redirecionou suas atividades para o Brasil e para a comercialização de lácteos [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3458" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2023/02/produtor2.jpg);"></div>
+												
+					<div class="date">08/11/22	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">CAMPO EM NOVAS MÃOS</h4>
+					<div class="text">
+						<p>Como preparar a família para um processo de sucessão sem sobressaltos A produção de leite é um negócio de família. E, quando a família muda, é preciso evoluir com ela. Produtores atentos à gestão e ao futuro são aqueles que começam o processo de sucessão hoje porque sabem que o futuro chega rápido e é [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3434" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2022/10/Fabr%c3%adcio-Maraschin-scaled.jpg);"></div>
+												
+					<div class="date">02/10/22	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Agenda do produtor precavido</h4>
+					<div class="text">
+						<p>Sempre que se vê um ano de seca e perdas no campo, o produtor pensa que isso nunca mais ocorrerá porque, antes da próxima, investirá para evitar novos prejuízos. Mas, os meses passam, a chuva volta e os planos de investimentos que lhe garantiriam a autonomia hídrica ficam na gaveta. Para ajudar na implementação de [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3425" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2022/09/Cr%c3%a9dito-Mauricio-Coser-scaled-e1663850165474.jpg);"></div>
+												
+					<div class="date">22/09/22	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Tecnologia a serviço da família</h4>
+					<div class="text">
+						<p>Na década de 1980, Darci e Neli Coser receberam do patriarca Albino Coser duas vacas de leite e alguns hectares de terra na área rural de Xaxim (SC). O que começou com a partilha de bens entre os filhos foi, na verdade, o pontapé de uma produção que está em constante evolução. O casal teve [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3422" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2022/09/Image-Eleg%c3%aa.png);"></div>
+												
+					<div class="date">19/09/22	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Elegê inova e lança leite UHT Tradicional+Leve</h4>
+					<div class="text">
+						<p>Alimento com menos gordura e todo sabor chega aos supermercados da Região Sul Para os consumidores que não abrem mão do sabor na hora de escolher seu leite, uma nova opção chega às gôndolas dos supermercados. Líder no mercado de lácteos no Rio Grande do Sul, a Elegê traz uma solução para um dia a [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3419" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2022/09/Sem-t%c3%adtulo-7-1.png);"></div>
+												
+					<div class="date">06/06/22	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Manteiga Président é eleita a melhor do Brasil</h4>
+					<div class="text">
+						<p>A manteiga Président foi escolhida como a melhor do Brasil em teste promovido pelo suplemento Paladar, do jornal O Estado de S. Paulo. A escolha se deu por meio de cinco especialistas consultados pelo jornal e submetidos a um teste às cegas de 11 amostras de manteiga sem sal, nacionais e importadas. Eles tiveram que [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3389" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2021/11/SiteLACTALIS.jpg);"></div>
+												
+					<div class="date">24/11/21	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Queijo Président será reconhecido com o prêmio Carrinho Agas 2021</h4>
+					<div class="text">
+						<p>A Président, integrante do portfólio de marcas da Lactalis do Brasil, será reconhecida com o prêmio Carrinho Agas 2021 na categoria Queijos. Concedido pela Associação Gaúcha de Supermercados (Agas), o mérito destaca marcas de diferentes segmentos em 36 categorias, além de duas personalidades. O prêmio será entregue na segunda-feira (29/11) em evento a ser realizado [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3364" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2021/06/Carolina-Jardine.jpg);"></div>
+												
+					<div class="date">01/06/21	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Cade aprova aquisição, e Lactalis assume operações industriais da Cativa</h4>
+					<div class="text">
+						<p>O Conselho Administrativo de Defesa Econômica (Cade) autorizou a Lactalis do Brasil a incorporar os ativos pertencentes à Cooperativa Cativa, com sede em Londrina, no Paraná. A operação, concluída nesta terça-feira (1º/06), exatos dois meses após o anúncio de intenção, foi formalizada em comunicado ao mercado nesta tarde. Com a aquisição, a Lactalis assume as [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3351" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2021/03/cativa.png);"></div>
+												
+					<div class="date">31/03/21	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Cooperativa Cativa &#038; Lactalis do Brasil firmam Parceria Estratégica* </h4>
+					<div class="text">
+						<p>Em 31 de março de 2021, a Lactalis do Brasil firmou um acordo de parceria com a Cooperativa Cativa, com sede em Londrina, no Estado do Paraná. O acordo prevê uma parceria de longo prazo, tendo como base um contrato de fornecimento exclusivo de leite por parte da Cativa à Lactalis por 10 anos e renovável [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3334" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2021/01/Carolina-Jardine.png);"></div>
+												
+					<div class="date">06/01/21	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Lactalis amplia exportações e abre mercado para lácteos do Brasil</h4>
+					<div class="text">
+						<p>A Lactalis do Brasil, empresa responsável pela produção das marcas Elegê, Parmalat e Président, encerrou o ano de 2020 com projeção de elevar em 167% o volume de produtos exportados em relação a 2019. Ao longo do ano passado, mesmo com as dificuldades logísticas impostas pela pandemia a todos os setores industriais, a Lactalis conseguiu [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3320" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2020/11/Lactalis-Pr%c3%aamio.png);"></div>
+												
+					<div class="date">30/11/20	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Elegê é agraciada com o prêmio Carrinho Agas 2020</h4>
+					<div class="text">
+						<p>A Elegê, que integra o escopo de marcas da Lactalis do Brasil, será agraciada com o troféu Carrinho Agas 2020, na categoria Melhor Fornecedor de Leites. A premiação, concedida pela Associação Gaúcha de Supermercados (Agas), destaca produtos nas gôndolas dos supermercados gaúchos a partir de avaliação de diversos critérios. O evento é considerado um dos [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3297" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2020/05/foto-caminh%c3%a3o-le.jpg);"></div>
+												
+					<div class="date">21/05/20	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Lactalis do Brasil doa alimentos a entidades no Rio Grande do Sul</h4>
+					<div class="text">
+						<p>Três entidades assistenciais de Porto Alegre e uma de Teutônia receberam doações de alimentos da Lactalis do Brasil, indústria de laticínios com fábricas no Rio Grande do Sul. Na capital, o caminhão da Lactalis foi até o Asilo Padre Cacique, à Fundação Pão dos Pobres e ao Instituto Pobres Servos da Divina Providência. Em Teutônia, [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+						<div class="item" id="3292" >
+													<div class="left" style="background-image: url(../../wp-content/uploads/2020/05/foto-n%c3%a3odemita-site.jpg);"></div>
+												
+					<div class="date">01/05/20	
+					 // Press Releases						
+					</div>
+					<h4 class="titledica">Grupo Lactalis adere ao movimento #NÃODEMITA</h4>
+					<div class="text">
+						<p>Com mais de 8,6 mil funcionários no país, a Lactalis foi a primeira entre as grandes empresas do setor de laticínios brasileiro a anunciar seu ingresso no movimento #NÃODEMITA, manifesto que assegura a manutenção do quadro de colaboradores durante a pandemia de Coronavírus. Todas as empresas do grupo &#8211; Lactalis do Brasil, Nutrifont e Itambé [&hellip;]</p>
+					</div>
+												<div class="button">
+								ler matéria							</div>
+					
+					
+		
+				</div>
+			</div>
+	<div class="content">
+		<div class='wp-pagenavi' role='navigation'>
+<span class='pages'>| Página: </span><span aria-current='page' class='current'>1</span><a class="page larger" title="Página 2" href="page/2/index.html">2</a><a class="nextpostslink" rel="next" href="page/2/index.html"><div>  </div></a>
+</div>	</div>
+	<div class="contato-area-nfs">
+		<h5>CONTATO</h5>
+		<div class="text">
+			Assessoria de Imprensa - Jardine Agência de Comunicação		</div>
+		<div class="subtitle">
+			RELACOES COM A IMPRENSA LACTALIS DO BRASIL		</div>
+		<a style="display: block;" href="mailto:reportagem@jardinecomunicacao.com.br" class="emaillink">
+			reportagem@jardinecomunicacao.com.br
+		</a>
+		<div class="phonelink">
+			+55 (51) 3224 01 04
+		</div>
+	</div>
+</main>
+	<div class="interna-post">
+
+	<div class="close"></div>
+						<div class="item 3491">
+								<h4 class="title">Itambé é eleito o melhor leite condensado do mercado</h4>
+				<div class="date">17/03/23</div>
+				<img width="1080" height="1350" src="../../wp-content/uploads/2023/03/O-PREFERIDO-DO-MERCADO.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2023/03/O-PREFERIDO-DO-MERCADO.png 1080w, https://lactalis.com.br/wp-content/uploads/2023/03/O-PREFERIDO-DO-MERCADO-240x300.png 240w, https://lactalis.com.br/wp-content/uploads/2023/03/O-PREFERIDO-DO-MERCADO-819x1024.png 819w, https://lactalis.com.br/wp-content/uploads/2023/03/O-PREFERIDO-DO-MERCADO-768x960.png 768w, https://lactalis.com.br/wp-content/uploads/2023/03/O-PREFERIDO-DO-MERCADO-60x75.png 60w" sizes="(max-width: 1080px) 100vw, 1080px" />				<div class="creditos">O-PREFERIDO-DO-MERCADO</div>				<div class="text">
+					<p>O leite condensado Itambé foi eleito o melhor do mercado brasileiro em um teste às cegas. Para chegar a esse veredito, o suplemento Paladar, do jornal O Estado de S. Paulo, convocou cinco confeiteiros para avaliarem um brigadeiro feito com oito marcas de leite condensado selecionadas. Um sabor de infância, foi o que o leite condensado Itambé trouxe para os jurados, além da aparência brilhante e textura sedosa.</p>
+<p>Os jurados foram Lu Bonometti, da Casa Bonometti; Bertrand Busquet, chef diretor da Chocolate Academy; Juliana Motterda Maria Brigadeiro; Rodrigo Ribeiro, professor de confeitaria e Rafael Aoki, do Quincho, restaurante que foi a sede das degustações.</p>
+<p>Foram avaliados textura do produto puro, desempenho na panela, rendimento e características do doce e, claro, o sabor tanto do brigadeiro quanto do produto em sua versão original.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3488">
+								<h4 class="title">Cooperativa Languiru e Lactalis firmam parceria de captação no RS</h4>
+				<div class="date">15/03/23</div>
+				<img width="1080" height="1080" src="../../wp-content/uploads/2023/03/parceria-lactalis-site.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2023/03/parceria-lactalis-site.png 1080w, https://lactalis.com.br/wp-content/uploads/2023/03/parceria-lactalis-site-300x300.png 300w, https://lactalis.com.br/wp-content/uploads/2023/03/parceria-lactalis-site-1024x1024.png 1024w, https://lactalis.com.br/wp-content/uploads/2023/03/parceria-lactalis-site-150x150.png 150w, https://lactalis.com.br/wp-content/uploads/2023/03/parceria-lactalis-site-768x768.png 768w, https://lactalis.com.br/wp-content/uploads/2023/03/parceria-lactalis-site-60x60.png 60w" sizes="(max-width: 1080px) 100vw, 1080px" />				<div class="creditos">Parceria Lactalis-Languiru</div>				<div class="text">
+					<p>A Cooperativa Languiru, de Teutônia (RS), e a Lactalis do Brasil firmaram parceria para potencializar a produção de lácteos no Rio Grande do Sul e ampliar a assistência aos produtores rurais gaúchos. Pelo acordo, a Languiru fornecerá à Lactalis, em um contrato de longo prazo, todo volume de leite in natura de seus produtores rurais, em uma região estratégica, onde a produção é altamente qualificada. A parceria garantirá o pagamento aos produtores e transportadores de leite e apoiará a Languiru em projetos que visem a melhoria da produtividade e qualidade no campo, em defesa da bacia leiteira local. Na mesma linha, a parceria estabelecida permitirá que as empresas trabalhem em regime de cooperação para fortalecimento de seus programas de fomento: o Clube do Produtor Lactalis e o Agrocenters Languiru, buscando a ampliação da assistência técnica nas regiões de atuação da Languiru.</p>
+<p>O acordo contempla, também, a produção de lácteos pela Lactalis para Languiru, otimizando os custos industriais para ambas as empresas e permitindo acesso a uma maior diversificação de portfólio à cooperativa. Nessa reestruturação, a Lactalis tentará absorver o maior número de colaboradores possíveis em suas atividades industriais de lácteos.</p>
+<p>Por outro lado, os funcionários Lactalis da região terão acesso a um convênio firmado com os supermercados, farmácias e agrocenters da Languiru, fortalecendo os laços de parceria entre as empresas e valorizando a economia de toda sociedade local.</p>
+<p>O presidente da Languiru, Dirceu Bayer, aponta que a parceria com a Lactalis faz parte do processo de reposicionamento da cooperativa. A proposta é garantir ainda mais dinamismo para as atividades de campo, colaborando para a elevação da eficiência e da renda dos produtores. “Nosso projeto é garantir que a Languiru continue produzindo mais e melhor. Em conjunto com a Lactalis do Brasil, vamos reinvestir em nossa estrutura e assegurar a longevidade e o fortalecimento de uma produção que é forte e consolidada na região. Unidos, iremos trabalhar fortemente para recuperação de produtores e ampliação da bacia leiteira da cooperativa em suas diversas regiões de atuação”, completou.</p>
+<p>Segundo o CEO da Lactalis no Brasil, Roosevelt Júnior, o acerto com a Languiru segue modelo exitoso já adotado pelo grupo em outras regiões do Brasil, a exemplo de parcerias com as Cooperativas CCPR em Minas Gerais e Cativa, no Paraná. “Esse acordo fortalece a bacia leiteira gaúcha, e todos os lados saem ganhando. Vamos unir a expertise da Languiru no campo e a eficiência produtiva da Lactalis, que vem se somando a cooperativas no fomento à produção de lácteos nas principais regiões produtoras do Brasil. Isso contribui com os objetivos estratégicos do grupo no país, que busca constituir uma liderança responsável no mercado que ajude no contínuo processo de melhoria da produtividade e qualidade do leite no campo e, também, para a manutenção de cooperativas fortes e representativas juntos aos produtores rurais”, frisou.</p>
+<p>Cooperativa Languiru – Fundada em 1955, a Cooperativa Languiru tem sede em Teutônia (RS). Atua no setor de laticínios, aves, suínos, embutidos e rações, além de operações em supermercados, farmácias e postos de combustíveis. Atualmente, tem 6 mil associados, 3 mil colaboradores e gera cerca de 50 mil empregos indiretos.</p>
+<p>Lactalis – Empresa familiar francesa criada em 1933 por André Besnier. O grupo é líder no mercado de lácteos, com presença industrial em 52 países, mais de 270 fábricas e 85.500 funcionários. Iniciou suas atividades no Brasil em 2014 com a aquisição da indústria de queijos da Balkis. Ampliou sua atuação em 2015, com a incorporação de ativos selecionados da LBR e Elebat e marcas como Elegê, Parmalat e Batavo. A Lactalis adquiriu, em 2019, a Itambé e, em 2021, a Confepar. A Lactalis do Brasil opera com as marcas Batavo, Président, Elegê, Cotochés, Poços de Caldas, Itambé e Parmalat. Atualmente, a Lactalis do Brasil é líder em captação de leite no Brasil, somando 2,5 bilhões de litros de leite/ano. Em constante expansão, mantém 21 unidades fabris espalhadas por oito estados (RS, SC, PR, MG, SP, PE, GO, RJ).</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3485">
+								<h4 class="title">Ação foca no empoderamento feminino para combate à violência</h4>
+				<div class="date">13/03/23</div>
+				<img width="2560" height="1920" src="../../wp-content/uploads/2023/03/MicrosoftTeams-image-75-scaled.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2023/03/MicrosoftTeams-image-75-scaled.jpg 2560w, https://lactalis.com.br/wp-content/uploads/2023/03/MicrosoftTeams-image-75-300x225.jpg 300w, https://lactalis.com.br/wp-content/uploads/2023/03/MicrosoftTeams-image-75-1024x768.jpg 1024w, https://lactalis.com.br/wp-content/uploads/2023/03/MicrosoftTeams-image-75-768x576.jpg 768w, https://lactalis.com.br/wp-content/uploads/2023/03/MicrosoftTeams-image-75-1536x1152.jpg 1536w, https://lactalis.com.br/wp-content/uploads/2023/03/MicrosoftTeams-image-75-2048x1536.jpg 2048w, https://lactalis.com.br/wp-content/uploads/2023/03/MicrosoftTeams-image-75-60x45.jpg 60w" sizes="(max-width: 2560px) 100vw, 2560px" />				<div class="creditos">Foto: Paula Medeiros</div>				<div class="text">
+					<p>O empoderamento feminino é um dos caminhos apontados como forma de combater a violência contra a mulher no Brasil. A posição é defendida pela idealizadora da ONG Justiça de Saia, a advogada e ex-promotora de Justiça Gabriela Manssur, que palestrou para colaboradores da Lactalis do Brasil na quarta-feira (08/03), Dia Internacional da Mulher.</p>
+<p>Além de marcar a programação do Dia Internacional da Mulher, a palestra também foi o momento de apresentar a parceria entre o Projeto Justiceiras e a Lactalis. Por meio do uso de um QR Code em 200 milhões de caixas de leite UHT das marcas Parmalat, Elegê, Batavo e Itambé, será possível acionar uma rede de apoio multiprofissional e realizar denúncias. Após o lançamento da campanha, que tem o mote “Por elas, para elas”, a iniciativa chamou a atenção de influenciadores nas mídias digitais ao longo do dia. “As mulheres também têm o direito de ocupar cargos de liderança, a se dedicar a uma causa”, afirmou Gabriela.</p>
+<p>“O leite é um produto para todos, e esse é o foco do projeto das Justiceiras: assegurar os direitos das mulheres e, ao garanti-los, assegurar também a segurança de seus filhos e de toda a sociedade”, observou o presidente da Lactalis para o Brasil e Cone Sul e entusiasta da iniciativa Patrick Sauvageot. “O projeto chega como forma de valorização e empoderamento de nossas funcionárias e, mais do que isso, como uma ação focada em segurança e saúde pública. O Compliance Feminino está alinhado com o conceito internacional da companhia, que prima por uma produção forte e responsável junto às comunidades em que atua e pelo respeito a todos os brasileiros, em especial às mulheres”, completou.</p>
+<p>As caixas de leite UHT com o QR Code especial do projeto devem chegar à casa de 8 milhões de brasileiros. As denúncias feitas através do QR Code são encaminhadas para o grupo de trabalho das Justiceiras, que junto às instituições parceiras auxilia em medidas judiciais e atendimento profissional.</p>
+<p>Foto: Paula Medeiros</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3470">
+								<h4 class="title">Caixinhas de leite na luta contra a violência à mulher</h4>
+				<div class="date">08/03/23</div>
+				<img width="2048" height="1536" src="../../wp-content/uploads/2023/03/IMG_0330.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2023/03/IMG_0330.jpeg 2048w, https://lactalis.com.br/wp-content/uploads/2023/03/IMG_0330-300x225.jpeg 300w, https://lactalis.com.br/wp-content/uploads/2023/03/IMG_0330-1024x768.jpeg 1024w, https://lactalis.com.br/wp-content/uploads/2023/03/IMG_0330-768x576.jpeg 768w, https://lactalis.com.br/wp-content/uploads/2023/03/IMG_0330-1536x1152.jpeg 1536w, https://lactalis.com.br/wp-content/uploads/2023/03/IMG_0330-60x45.jpeg 60w" sizes="(max-width: 2048px) 100vw, 2048px" />				<div class="creditos">Crédito: Carolina Jardine</div>				<div class="text">
+					<p>Parmalat, Elegê, Batavo e Itambé unem-se às Justiceiras e lançam canal de acolhimento</p>
+<p>Quatro das maiores marcas de leite do mercado brasileiro uniram-se em uma ofensiva nacional contra a violência à mulher. Em parceria com a equipe do Projeto Justiceiras, Parmalat, Elegê, Batavo e Itambé lançam, neste dia 8 de março, um canal único de denúncias. Por meio de QR Code estampado em cerca de 200 milhões de caixinhas de leite UHT, será possível acionar uma rede de apoio multidisciplinar que inclui profissionais das áreas da Justiça, Saúde, Psicologia, Socioassistencial, Acolhimento, entre outras.</p>
+<p>Por meio de suas marcas, a Lactalis do Brasil é a primeira empresa do setor alimentício a aderir à rede, criada em 2020 para a identificação, prevenção e combate à violência contra a mulher pela ONG Justiça de Saia e sua idealizadora, a advogada e ex-promotora de Justiça Gabriela Manssur. O foco da iniciativa, explica ela, é facilitar o acesso à Justiça e ao sistema de proteção, colocando o socorro na frente das brasileiras todos os dias. “O leite está na mesa de famílias de diferentes faixas etárias e classes sociais. Estampar esse chamado nas milhares de caixinhas consumidas pelo Brasil é um serviço público”, frisou, lembrando que os relatos podem ser feitos pelas vítimas, mas também por seus amigos e parentes. O projeto já atendeu 13 mil casos, incluindo mulheres de todas as unidades da federação brasileira e em outros 27 diferentes países e conta com 15 mil voluntárias.</p>
+<p>Líder em captação de leite no Brasil, a Lactalis do Brasil embasará a divulgação da campanha no amplo potencial do próprio leite. Atualmente, os produtos da companhia chegam a mais de 8 milhões de lares brasileiros. “O leite é um produto para todos, e esse é o foco do projeto das Justiceiras: assegurar os direitos das mulheres e, ao garanti-los, assegurar também a segurança de seus filhos e de toda a sociedade”, completou o presidente da Lactalis para o Brasil e Cone Sul e entusiasta da iniciativa Patrick Sauvageot. “O projeto chega como forma de valorização e empoderamento de nossas funcionárias e, mais do que isso, como uma ação focada em segurança e saúde pública. O Compliance Feminino está alinhado com o conceito internacional da companhia, que prima por uma produção forte e responsável junto às comunidades em que atua e pelo respeito a todos os brasileiros, em especial às mulheres”, completou.</p>
+<p>A ação ainda prevê medidas para o público interno da companhia, que tem mais de 10 mil colaboradores no Brasil. Inclui treinamento de equipes, orientação para construção de um ambiente de trabalho harmonioso e uma campanha de RH focada no combate à violência doméstica, assédio moral e sexual, assim como desigualdade de gênero. Mais do que proteger as vítimas, explica Gabriela, o projeto busca a prevenção, chamando os homens para o debate sobre seu papel no enfrentamento da agressão feminina e para a urgência do empoderamento das mulheres.</p>
+<p>As informações coletadas durante a campanha são sigilosas e serão encaminhadas às autoridades competentes ou às equipes de apoio necessárias a cada caso. Assim que recebem uma denúncia, as Justiceiras entram em ação seja por meio de medidas judiciais e junto a instituições parceiras, seja por meio de apoio psicológico e médico às vítimas. O canal funciona sete dias por semana, 24 horas por dia.</p>
+<p>A preocupação da Lactalis do Brasil com a violência contra a mulher deve-se aos altos índices de ocorrências de ataque de gênero no país. Segundo a ONU, o Brasil ocupa a quinta colocação entre as nações com maiores índices de violação de Direitos das Mulheres. E a situação piorou após a pandemia de Covid-19 com a necessidade de isolamento domiciliar para conter a propagação do vírus. Segundo dados compilados pelo Fórum Brasileiro de Segurança Pública e Datafolha, em 2022, 18,6 milhões de brasileiras sofreram violência física, psicológica ou sexual, mais de 50 mil casos por dia. De acordo com pesquisa da Organização Mundial da Saúde (OMS), uma em cada três mulheres já sofreu alguma violência — número é superior à média global de 27%.</p>
+<p>&nbsp;</p>
+<p><strong>Crédito das fotos: Carolina Jardine</strong></p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3465">
+								<h4 class="title">Poços de Caldas está no pódio entre os melhores requeijões do mercado</h4>
+				<div class="date">16/02/23</div>
+				<img width="1024" height="1280" src="../../wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-09.37.16.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-09.37.16.jpeg 1024w, https://lactalis.com.br/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-09.37.16-240x300.jpeg 240w, https://lactalis.com.br/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-09.37.16-819x1024.jpeg 819w, https://lactalis.com.br/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-09.37.16-768x960.jpeg 768w, https://lactalis.com.br/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-16-at-09.37.16-60x75.jpeg 60w" sizes="(max-width: 1024px) 100vw, 1024px" />				<div class="creditos">Poços de Caldas-requeijão</div>				<div class="text">
+					<p>O requeijão Poços de Caldas está no pódio entre os melhores requeijões do mercado, segundo o suplemento Paladar, do jornal O Estado de S. Paulo, o produto foi eleito o terceiro melhor do mercado. Para formar o ranking foram convidados cinco especialistas que avaliaram as principais marcas vendidas. Das 12 avaliadas, o objetivo era encontrar as três que mais trouxessem um sabor delicado, cremosidade e boa apresentação, características da origem do requeijão no Brasil.<br />
+Os jurados foram a food stilyst Tatiane Damberg, o gerente gastronômico do grupo Bráz Rodrigo Augusto e os especialistas em queijos Falco Bonfadin, Fernando Oliveira e Mônica Resende. Muito saboroso e levemente amanteigado, o requeijão apresentou textura perfeita, sal no ponto e bom aspecto visual, segundo os jurados.<br />
+O cremoso requeijão Poços de Caldas da Lactalis está disponível nas embalagens de 200g e 400g, nos sabores tradicional e cheddar.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3447">
+								<h4 class="title">LACTALIS DO BRASIL FIRMA ACORDO COM FONTERRA E NESTLÉ PARA ADQUIRIR A DPA BRASIL E GERENCIAR A FABRICAÇÃO DE PRODUTOS REFRIGERADOS NESTLÉ NO BRASIL</h4>
+				<div class="date">14/12/22</div>
+				<img width="302" height="273" src="../../wp-content/uploads/2022/12/Patrick_Sauvageot_creditoPedroMachado_44meia.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2022/12/Patrick_Sauvageot_creditoPedroMachado_44meia.png 302w, https://lactalis.com.br/wp-content/uploads/2022/12/Patrick_Sauvageot_creditoPedroMachado_44meia-300x271.png 300w, https://lactalis.com.br/wp-content/uploads/2022/12/Patrick_Sauvageot_creditoPedroMachado_44meia-60x54.png 60w" sizes="(max-width: 302px) 100vw, 302px" />				<div class="creditos">Patrick_Sauvageot_creditoPedroMachado_44meia</div>				<div class="text">
+					<p>A Lactalis do Brasil chegou a um acordo para adquirir a DPA Brasil (Dairy Partners America), joint venture criada entre a Fonterra e a Nestlé em 2003 para fabricar e comercializar produtos lácteos em toda a América Latina. Em 2013, a joint venture redirecionou suas atividades para o Brasil e para a comercialização de lácteos refrigerados.</p>
+<p>Pelo acordo firmado, a Lactalis do Brasil assumirá a DPA, empresa que reúne centros de distribuição, duas fábricas localizadas em Araras (SP) e Garanhuns (PE), ficando responsável pela fabricação e distribuição de produtos de diversas marcas, como Chambinho, Chamyto e Chandelle. Para essas três marcas, os direitos de propriedade intelectual no país serão transferidos com a aquisição. O acordo também prevê uma licença de longo prazo para o uso de marcas da Nestlé, como Ninho, Neston, Molico e Nesfit, exclusivamente para o segmento de lácteos refrigerados, de modo que a DPA continue a fabricar e distribuir esses produtos.</p>
+<p>Após a operação, os 1.300 funcionários da DPA se juntarão e trabalharão ao lado dos funcionários da Lactalis no Brasil.</p>
+<p>O anúncio agregará marcas representativas ao portfólio de refrigerados da Lactalis do Brasil, que hoje já inclui as renomadas Parmalat, Président, Poços de Caldas, Batavo, Itambé e Elegê. “A aquisição da DPA traz muita complementaridade ao nosso portfólio de marcas e produtos, além de ajudar a ampliar nossa cobertura comercial por meio da expansão de áreas geográficas. Consolida a Lactalis como líder responsável em lácteos no Brasil, capaz de auxiliar toda a cadeia produtiva em um processo de melhoria contínua de sua competitividade. Continuaremos trabalhando com a equipe da DPA para melhorar cada vez mais a qualidade e a produtividade do leite no campo, o que resulta em benefícios para todo o setor e, principalmente, para o consumidor brasileiro”, afirma o presidente da Lactalis para Brasil e Cone Sul, Patrick Sauvageot.</p>
+<p>Os termos do acordo serão submetidos à apreciação do Conselho Administrativo de Defesa Econômica (Cade).</p>
+<p><strong>Sobre a Lactalis</strong></p>
+<p>A Lactalis é uma empresa familiar francesa criada em 1933 por André Besnier. Em 2022, o Grupo Lactalis é líder no mercado de lácteos, com presença industrial em 52 países, mais de 270 fábricas e 85.500 funcionários. Iniciou suas atividades no Brasil em 2014 com a aquisição da indústria de queijos da Balkis. Ampliou sua atuação em 2015, com a incorporação de ativos selecionados da LBR e Elebat e marcas como Elegê, Parmalat e Batavo. A Lactalis adquiriu, em 2019, a Itambé e, em 2021, a Confepar. A Lactalis do Brasil oferece aos consumidores produtos lácteos saborosos e de alta qualidade em uma seleção de marcas consagradas, incluindo Batavo, Président, Elegê, Cotochés, Poços de Caldas, Itambé e Parmalat. Atualmente, a Lactalis do Brasil é líder em captação de leite no Brasil. Em constante expansão, a Lactalis mantém 23 unidades fabris espalhadas por oito estados (RS, SC, PR, MG, SP, PE, GO, RJ). A partir da concretização do novo negócio, passará a contar com mais de 10.900 funcionários no Brasil.</p>
+<p><strong>Sobre a Nestlé</strong></p>
+<p>A Nestlé é a líder mundial no mercado de alimentos e bebidas, com mais de 270.000 funcionários, mais de 2.000 marcas e presença em 186 países. Alinhada a seu slogan “Good food, Good life”, a Nestlé acredita no poder dos alimentos para ajudar as pessoas e os animais a terem uma vida mais feliz e saudável. A empresa persegue metas ambiciosas de sustentabilidade, focadas em promover a saúde do planeta, construir comunidades positivas e apoiar um sistema alimentar saudável. No Brasil, instalou sua primeira fábrica em 1921, em Araras (SP), e hoje atua em oito estados (SP, MG, BA, PE, GO, RJ, RS, ES) com mais de 30 mil funcionários.</p>
+<p><strong>Sobre a Fonterra</strong></p>
+<p>A Fonterra é uma cooperativa que integra cerca de 9 mil famílias de agricultores da Nova Zelândia. Por meio do espírito de cooperação e de uma atitude positiva, os produtores e funcionários da Fonterra compartilham as qualidades do leite por meio de marcas inovadoras de consumo, serviço de alimentação e ingredientes. A sustentabilidade está no centro de suas ações, assim como o comprometimento em deixar as coisas de uma maneira melhor do que as encontraram. São apaixonados pelas comunidades onde atuam e têm foco em fazer o bem.</p>
+<p><strong>Sobre a DPA</strong></p>
+<p>Atuando no mercado de refrigerados lácteos há 48 anos, a DPA é uma das maiores companhias do segmento do Brasil. A empresa, que hoje conta com 1.300 funcionários, possui duas fábricas em Araras e Garanhuns, centros de distribuição, sede e equipe de vendas, aposta na fabricação de produtos de alta qualidade com as marcas Nestlé no segmento de refrigerados e detém as marcas Chambinho, Chamyto e Chandelle.</p>
+<p>A qualidade diferenciada de seus produtos aliada ao compromisso com a inovação torna seus produtos cada vez mais desejados por seus clientes e consumidores.</p>
+<p><strong>Contatos de Imprensa Lactalis do Brasil</strong></p>
+<p>Guilherme Portella, diretor de Comunicação, CSR e Assuntos Regulatórios da Lactalis do Brasil &#8211; guilherme.portella@br.lactalis.com</p>
+<p>Carolina Jardine &#8211; assessoria de imprensa Lactalis do Brasil – (51) 3224- 0104 &#8211; (51) 99911-1342</p>
+<p><strong>Vídeo Oficial</strong><br />
+<a href="https://drive.google.com/file/d/1Q2023TQMgPMwJHcsU_OTYAMoCPxssnzV/view?usp=sharing">https://drive.google.com/file/d/1Q2023TQMgPMwJHcsU_OTYAMoCPxssnzV/view?usp=sharing</a></p>
+<p>Crédito foto: Pedro Machado/ 44Meia</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3458">
+								<h4 class="title">CAMPO EM NOVAS MÃOS</h4>
+				<div class="date">08/11/22</div>
+				<img width="1536" height="2048" src="../../wp-content/uploads/2023/02/produtor2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Rosiclaire Guzzo" srcset="https://lactalis.com.br/wp-content/uploads/2023/02/produtor2.jpg 1536w, https://lactalis.com.br/wp-content/uploads/2023/02/produtor2-225x300.jpg 225w, https://lactalis.com.br/wp-content/uploads/2023/02/produtor2-768x1024.jpg 768w, https://lactalis.com.br/wp-content/uploads/2023/02/produtor2-1152x1536.jpg 1152w, https://lactalis.com.br/wp-content/uploads/2023/02/produtor2-60x80.jpg 60w" sizes="(max-width: 1536px) 100vw, 1536px" />				<div class="creditos">Rosiclaire Guzzo</div>				<div class="text">
+					<div style="text-align: center;">Como preparar a família para um processo de sucessão sem sobressaltos</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">A produção de leite é um negócio de família. E, quando a família muda, é preciso evoluir com ela. Produtores atentos à gestão e ao futuro são aqueles que começam o processo de sucessão hoje porque sabem que o futuro chega rápido e é preciso estar preparado para ele. Seja por meio de consultorias especializadas, seja com o apoio do corpo técnico da Lactalis, produtores vêm profissionalizando a gestão ao lado de seus filhos em busca de uma transição tranquila.</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">Os exemplos mais exitosos vêm exatamente de quem se antecipa aos problemas. Como os produtores Pedro Reginatto, 70, e Loreni Reginatto, 68, da Fazenda Reginatto, de Cacique Doble (RS), que compartilham a gestão da propriedade com o filho Alexandre Reginatto, 36 anos. A parceria na produção de leite e soja começou quando ele completou 18 anos e as irmãs Veruska e Janaína decidiram ir estudar no Mato Grosso do Sul. Aos poucos, Alexande foi convencendo os pais a reinvestirem na fazenda. O gado que ficava solto na pastagem ganhou um Compost Barn, e a produção decolou. Além de incorporar novas áreas e elevar a produtividade por vaca de 10 litros/dia para 37,5 litros/dia, hoje a Fazenda Reginatto entrega 1.800 litros de leite/dia à Lactalis. “A empresa nos ajuda com a assistência técnica”.</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">A maior dificuldade nesse processo, confidencia Alexandre, foi incorporar tecnologia aderindo a sistemas de ordenha e monitoramento dos animais mecanizados. Além de internalizar a produção de silagem para o gado, a fazenda adotou técnicas de bem-estar animal e conquistou a certificação de livre de brucelose e tuberculose. “A mudança no trato dos animais resultou em respostas muito positivas tanto na qualidade de vida das pessoas quanto dos animais”, diz. A missão agora, adianta Alexandre, é ver o filho Lorenzo, de apenas sete anos, assumir as rédeas da produção.</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">Segundo o consultor Ricardo Gonçalves, da Affectum Consultoria, a sucessão rural em propriedade de leite é mais complexa do que na de corte porque há um patrimônio menor a ser dividido e, muitas vezes, a atividade é incapaz de sustentar muitas famílias. “O desafio da empresa familiar é fazer o negócio crescer na mesma velocidade com que a família cresce”, ressalta.</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">Para evitar que todos os filhos – ou parte deles – abandone a produção, a recomendação de especialistas é intensificar o uso das áreas e agregar valor ao leite. Com mais quantidade de sólidos e volume por vaca, a rentabilidade da propriedade também ganha escala. “Se o produtor tem pouca área, é preciso fazer girar dinheiro. No gado de leite, se tem menos espaço para erro de sucessão”, recomenda o consultor.</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">Outra história de sucessão vem do município de São João da Urtiga, no interior do Rio Grande do Sul. No Tambo Guzzo, os pais Aldonir e Realda Guzzo trabalham ao lado do filho Maicon, 32, em um modelo de produção que conta com 120 vacas, sendo 55 em lactação, além de novilhas e bezerras. A produção chegou a 2.200 litros/dia e, neste ano, está em 1.700 litros/dia em função da seca. Mas nem sempre foi assim. Quando Maicon era mais novo, a propriedade de apenas 10 hectares de lavouras de soja e milho era insuficiente para dar escala a um projeto leiteiro mais consistente e havia apenas duas vacas para atender ao consumo da família.</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">Foi em 2007 que o filho, recém-formado no Colégio Agrícola e depois de acumular experiência no varejo em Sananduva (RS), voltou pra casa e chamou o pai para um papo sério. Maicon iria voltar para o campo, mas era preciso implementar algumas mudanças. Com a incorporação de mais 15 hectares e de uma sala de ordenha, a propriedade ganhou escala, intensificou a produção de milho para gerenciar sua própria silagem e investiu em genética que lhe permitiu dar força à produção de leite. A adoção de um Compost Barn ajudou a melhorar a rotina de manejo das vacas e da própria família. Apesar dos ganhos, Maicon admite que há muito a avançar em termos de gestão. Hoje, os Guzzo ainda mantêm os resultados financeiros compartilhados sem uma delimitação de remuneração clara. As decisões de projetos e novos investimentos são todas tomadas em grupo.</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">Mas chegar a esse consenso não foi fácil. Maicon acredita que é essencial que os filhos integrem-se desde cedo em atividades de menor responsabilidade, mas que lhe permitam aprender com as gerações que lhe antecederam. “A pessoa tem que chegar como ajudante, com humildade para aprender antes de assumir o negócio. A atividade é complexa e é preciso ser produtor, agricultor, mecânico, eletricista, etc. Quem volta para a fazenda e chega direto para assumir está condenado ao fracasso”</div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;"></div>
+<div style="text-align: center;">Apesar de a fazenda hoje ter internet, energia estável e todo o conforto necessário, Maicon preferiu morar na cidade com a esposa Rosicler e a filha Isabela. Assim como fazem profissionais em grandes centros urbanos, leva 20 minutos para chegar ao trabalho, onde toca a ordenha ao lado do pai e da mãe, que seguem morando no campo. “A diferença é que nesse emprego a gente nunca tem hora para sair. No campo, é preciso muita dedicação”, frisa.</div>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3434">
+								<h4 class="title">Agenda do produtor precavido</h4>
+				<div class="date">02/10/22</div>
+				<img width="2560" height="1739" src="../../wp-content/uploads/2022/10/Fabr%c3%adcio-Maraschin-scaled.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Crédito: Fabrício Maraschin" srcset="https://lactalis.com.br/wp-content/uploads/2022/10/Fabrício-Maraschin-scaled.jpg 2560w, https://lactalis.com.br/wp-content/uploads/2022/10/Fabrício-Maraschin-300x204.jpg 300w, https://lactalis.com.br/wp-content/uploads/2022/10/Fabrício-Maraschin-1024x696.jpg 1024w, https://lactalis.com.br/wp-content/uploads/2022/10/Fabrício-Maraschin-768x522.jpg 768w, https://lactalis.com.br/wp-content/uploads/2022/10/Fabrício-Maraschin-1536x1044.jpg 1536w, https://lactalis.com.br/wp-content/uploads/2022/10/Fabrício-Maraschin-2048x1391.jpg 2048w, https://lactalis.com.br/wp-content/uploads/2022/10/Fabrício-Maraschin-60x41.jpg 60w" sizes="(max-width: 2560px) 100vw, 2560px" />				<div class="creditos">Fabrício Maraschin</div>				<div class="text">
+					<p>Sempre que se vê um ano de seca e perdas no campo, o produtor pensa que isso nunca mais ocorrerá porque, antes da próxima, investirá para evitar novos prejuízos. Mas, os meses passam, a chuva volta e os planos de investimentos que lhe garantiriam a autonomia hídrica ficam na gaveta. Para ajudar na implementação de um projeto concreto que ajude as propriedades a ficarem cada vez menos dependentes do regime de chuvas, a Lactalis trouxe aqui a história de dois produtores que aprenderam a driblar o problema. Gilmar Delmondes da Silva investiu em pastagens abundantes em Ouroeste (SP). O gaúcho Marcos Souza de Freitas, da Cabanha Gema, de Santa Rosa (RS), conta sua experiência na gestão de compra de grãos e insumos.</p>
+<p>Mas fique atento, o que vale em uma região produtiva nem sempre serve para a outra. Mire no seu modelo de negócio e na realidade climática da sua região e mãos à obra.</p>
+<p>Áreas de Sequeiro<br />
+Pastagem + Resistente</p>
+<p>Se a chuva não vem, é preciso ter um cultivo resistente e capaz de alimentar o gado leiteiro com eficiência. Pensando em garantir a nutrição do rebanho de 43 bovinos leiteiros (17 em lactação), o produtor Gilmar Delmondes da Silva, da Chácara Santa Bárbara, de Ouroeste (SP), vem cultivando a nova variedade BRS Capiaçu, uma espécie de capim-elefante altamente resistente à estiagem. A gramínea é permanente e permite até três cortes ao ano em regimes normais de chuva e dois em épocas mais secas.</p>
+<p>O teste com a Capiaçu na Santa Bárbara começou em 2021, quando o produtor cultivou 12 mil metros quadrados da variedade. Mas, com a seca, precisou comprar nove toneladas de comida para as vacas, o que encareceu seu sistema tendo em vista a alta dos insumos. Neste ano, ele triplicou a área plantada e espera ver a conta fechar no azul.</p>
+<p>Exigente em matéria orgânica e adubo, a Capiaçu agrada ao gado. Pode ser utilizada tanto direto no cocho quanto na composição da ração. Em comparação ao milho, é mais vantajosa porque está menos suscetível à queima pela falta de água e cresce o ano todo, enquanto a lavoura de milho rende apenas uma colheita. Segundo o produtor, o ganho em volume de massa compensa a pequena perda em potencial nutricional: enquanto o milho permite rendimento de 20 a 25 litros/vaca/dia, a Capiaçu atinge 19 litros/vaca/dia.</p>
+<p><em>Dicas do Gilmar:</em><br />
+&#8211; Use variedades que<br />
+produzem massa verde<br />
+o ano inteiro e que sejam<br />
+mais resistentes à seca;<br />
+&#8211; Adote um sistema de<br />
+irrigação de pastagens por<br />
+gotejamento;<br />
+&#8211; Use parte da massa verde<br />
+para alimentar o gado<br />
+direto no cocho e com<br />
+o restante produza sua<br />
+própria ração e estoque na<br />
+fazenda;<br />
+&#8211; Maneje o gado em<br />
+piquetes e forneça<br />
+alimento no cocho.</p>
+<p>&nbsp;</p>
+<p><strong>Sul do Brasil</strong><br />
+<strong>Consumo na ponta do lápis</strong></p>
+<p>A falta de comida em tempos de seca muitas vezes pode ser amenizada por um planejamento eficiente. Saber quanto os seus animais consomem e criar um plano nutricional ajuda a evitar o desabastecimento. É o que faz o criador Marcos Souza de Freitas, da Cabanha Gema, de Santa Rosa (RS). A propriedade está em uma região com vasta oferta de grãos, e em todo início de safra ele planeja quanto produzirá em suas próprias terras e quanto será obrigado a adquirir dos vizinhos. “Antes disso, precisamos saber com precisão qual o consumo de alimento e forragem que o rebanho necessitará.” Neste ano, conta ele, seus quatro hectares de lavouras de milho produziram 30% da demanda alimentar das 50 vacas Jersey criadas em sistema de Compost Barn. O resto acabou adquirindo na região. Mas, com a seca, foi preciso refazer as contas para suprir a perda do teor de amido, uma vez que, enquanto cargas comuns de milho têm entre 25% a 30% de amido, as deste ano ficaram entre 15% e 20%.</p>
+<p>Segundo ele, economizar na comida não é uma opção. Mas é preciso fazer as contas para manter a produção de 1.100 litros/dia estável e lucrativa. O ajuste na alimentação e um reforço extra de milho em grão adquirido direto da cerealista foram vitais para recuperar rapidamente a perda de produtividade por animal registrada no período mais crítico da seca de 2021/2022. Segundo ele, alguns animais que normalmente produzem 27 litros/dia, nesse período, baixaram para um patamar de 22 litros/dia. Com o milho extra, a produção voltou a 25 litros/dia.</p>
+<p>Mas quando o produtor não tem a sorte de estar em uma região graneleira, a saída está em adquirir alimento mais longe, o que também exige atenção. Em vez de comprar silagem, o produtor recomenda a aquisição de feno ou outros tipos de matéria seca, o que permite um maior ganho nutricional em relação à carga deslocada. Sobre a possibilidade de investir em pivôs de irrigação, ele aconselha que, antes, se verifique a disponibilidade de água para alimentá-los. “O pivô precisa de uma barragem. E se todo mundo for fazer irrigação vai faltar água da mesma forma.”</p>
+<p><em>Dicas do Marcos</em><br />
+&#8211; Saber exatamente qual o<br />
+consumo de seus animais;<br />
+&#8211; Negociar antecipadamente<br />
+com parceiros e<br />
+produtores da região<br />
+acesso à alimentação que<br />
+será necessária;<br />
+&#8211; Consultar o corpo técnico<br />
+da Lactalis para verificar<br />
+formas de compensação<br />
+alimentar viáveis;<br />
+&#8211; Se tiver que trazer alimento<br />
+de longe, invista em<br />
+matéria seca que garante<br />
+maior rentabilidade;<br />
+&#8211; Estude a viabilidade de<br />
+cultivo de variedades de<br />
+inverno como o trigo. Essa<br />
+produção deve destinarse<br />
+preferencialmente a<br />
+novilhas e vacas secas<br />
+visto o menor nível<br />
+energético desta forragem.<br />
+&#8211; Atente para produzir<br />
+volumosos que possam<br />
+ser armazenados. De<br />
+nada adianta ter muito<br />
+volumoso se ele não será<br />
+demandado no momento<br />
+certo.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3425">
+								<h4 class="title">Tecnologia a serviço da família</h4>
+				<div class="date">22/09/22</div>
+				<img width="1920" height="2560" src="../../wp-content/uploads/2022/09/Cr%c3%a9dito-Mauricio-Coser-scaled-e1663850165474.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2022/09/Crédito-Mauricio-Coser-scaled-e1663850165474.jpg 1920w, https://lactalis.com.br/wp-content/uploads/2022/09/Crédito-Mauricio-Coser-scaled-e1663850165474-225x300.jpg 225w, https://lactalis.com.br/wp-content/uploads/2022/09/Crédito-Mauricio-Coser-scaled-e1663850165474-768x1024.jpg 768w, https://lactalis.com.br/wp-content/uploads/2022/09/Crédito-Mauricio-Coser-scaled-e1663850165474-1152x1536.jpg 1152w, https://lactalis.com.br/wp-content/uploads/2022/09/Crédito-Mauricio-Coser-scaled-e1663850165474-1536x2048.jpg 1536w, https://lactalis.com.br/wp-content/uploads/2022/09/Crédito-Mauricio-Coser-scaled-e1663850165474-60x80.jpg 60w" sizes="(max-width: 1920px) 100vw, 1920px" />				<div class="creditos">Crédito Mauricio Coser</div>				<div class="text">
+					<p>Na década de 1980, Darci e Neli Coser receberam do patriarca Albino Coser duas vacas de leite e alguns hectares de terra na área rural de Xaxim (SC). O que começou com a partilha de bens entre os filhos foi, na verdade, o pontapé de uma produção que está em constante evolução. O casal teve quatro filhos: Graziela, Emanuele, Gislaine e Fernando. Somaram-se a eles os cônjuges e os quatro netos. Todos<br />
+sempre foram atuantes na propriedade, mas as filhas que estudaram Farmácia, Agronomia e Zootecnia decidiram também ter experiências fora da propriedade, o que alertou a família sobre a importância de mudar o sistema produtivo.</p>
+<p>Fernando, que é técnico em agropecuária, está à frente da produção. Ele conta que a expansão foi aos poucos com a compra de mais terras e mais animais. O primeiro grande investimento se deu nos anos2000, quando abriram uma estrebaria inserindo o sistema canalizado de espinha de peixe. Naquele momento, tinham 40 vacas que alcançavam uma produção de 1 mil litros/dia. “Em 2011, terminamos com a granja de suínos que tínhamos para nos dedicar ao leite.”</p>
+<p>O manejo sempre foi feito pela família, mas, em razão da saída das irmãs para estudar e trabalhar, o investimento foi sendo direcionado para ampliar a tecnologia e sistematizar a produção. “Em 2020, surgiu a ideia de robotizar a ordenha e conseguimos concretizar em outubro de 2021”, lembra Fernando, pontuando que há sete meses operam com o novo sistema.</p>
+<p>A mudança só foi possível porque, há três anos, os Coser investiram no sistema FreeStall. Além de reduzir a necessidade de mão de obra, o manejo robotizado melhora a qualidade do leite e estimula o aumento da produção. “Assim, pudemos dar mais atenção à reprodução<br />
+e aos cuidados clínicos para que a propriedade cresça mais”, frisa Fernando.</p>
+<p>A aposta da família, que inclusive batizou seu empreendimento de Coser Milk Farm, é atingir em breve a produção de três mil litros/dia. Atualmente, o rebanho de 70 vacas produz em média 32 litros/vaca/dia com entrega diária para a Lactalis de aproximadamente 2.000 l/dia.</p>
+<p>Ao todo, são cinco anos entregando leite para a indústria. Fernando explica que a assessoria da empresa foi e segue sendo muito importante para evolução da propriedade. Participante do Clube do Produtor, ele usa o canal para compra de medicamentos e de sal mineral.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3422">
+								<h4 class="title">Elegê inova e lança leite UHT Tradicional+Leve</h4>
+				<div class="date">19/09/22</div>
+				<img width="302" height="272" src="../../wp-content/uploads/2022/09/Image-Eleg%c3%aa.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2022/09/Image-Elegê.png 302w, https://lactalis.com.br/wp-content/uploads/2022/09/Image-Elegê-300x270.png 300w, https://lactalis.com.br/wp-content/uploads/2022/09/Image-Elegê-60x54.png 60w" sizes="(max-width: 302px) 100vw, 302px" />				<div class="creditos">Image Elegê</div>				<div class="text">
+					<p><span style="font-weight: 400;">Alimento com menos gordura e todo sabor chega aos supermercados da Região Sul</span></p>
+<p><span style="font-weight: 400;">Para os consumidores que não abrem mão do sabor na hora de escolher seu leite, uma nova opção chega às gôndolas dos supermercados. Líder no mercado de lácteos no Rio Grande do Sul, a Elegê traz uma solução para um dia a dia mais saudável: o leite UHT Tradicional+Leve. Alinhado com a tendência de redução da ingestão de gorduras, o alimento tem </span><span style="font-weight: 400;">33% menos gorduras totais do que o UHT Tradicional Elegê,</span><span style="font-weight: 400;"> mas sem penalizar a palatabilidade e o sabor  do leite tradicional. “A Elegê sabe da importância nutricional do leite na dieta do brasileiro e trouxe uma </span><span style="font-weight: 400;">solução inovadora para ajudar o consumidor que está buscando alternativas mais leves, mas sem abrir mão das características sensoriais a que está habituado</span><span style="font-weight: 400;">”, salienta a diretora de marketing de Elegê, Christina Larroude. O novo produto completa a linha de leites UHT Elegê, que inclui as versões Tradicional (3% de gordura), Tradicional+Leve (2% de gordura), Semidesnatado (1% de gordura) e Desnatado (0% de gordura).</span></p>
+<p><span style="font-weight: 400;">O leite é uma das formas mais simples e concentradas de ingestão de nutrientes essenciais para a saúde humana. Em um copo de leite, ainda que nas versões com menos gordura, é possível encontrar proteína, cálcio, fósforo, magnésio e vitaminas necessários para uma boa saúde. Entre os benefícios associados ao leite, estão o estímulo à sensação de saciedade, o controle da diabetes, do colesterol e de doenças cardiovasculares. “O leite é um alimento rico em nutrientes e é essencial para a saúde humana em diferentes fases da vida, seja em seu consumo direto ou no preparo de refeições. Dentro de uma alimentação equilibrada, a recomendação média de consumo de laticínios é de 2-3 porções/ dia, dando preferência para versões de leites desnatados”, explica a nutricionista Simone Bach.</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">O consumo dos chamados leites magros é uma tendência mundial e de recomendação expressa emitida pelo governo do Estados Unidos por meio do guia Dietary Guidelines for Americans 2020-2025. Na França, por exemplo, 85% do mercado de leite UHT refere-se a rótulos desnatados ou semidesnatados. Na Argentina, esse índice é de 68%. Enquanto isso, no Brasil, o consumo de leites de gorduras reduzidas abrange apenas 13% do mercado. “A Elegê está ao lado do consumidor para ajudá-lo a fazer as melhores escolhas de acordo com suas necessidades nutricionais e estilo de vida”, completa Christina Larroude. Para facilitar esse processo, a linha de leite UHT Elegê também reformulará suas embalagens  de forma a comunicar mais claramente os benefícios e a porcentagem de gordura de cada um dos rótulos.</span><span style="font-weight: 400;"> </span></p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3419">
+								<h4 class="title">Manteiga Président é eleita a melhor do Brasil</h4>
+				<div class="date">06/06/22</div>
+				<img width="1080" height="1080" src="../../wp-content/uploads/2022/09/Sem-t%c3%adtulo-7-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2022/09/Sem-título-7-1.png 1080w, https://lactalis.com.br/wp-content/uploads/2022/09/Sem-título-7-1-300x300.png 300w, https://lactalis.com.br/wp-content/uploads/2022/09/Sem-título-7-1-1024x1024.png 1024w, https://lactalis.com.br/wp-content/uploads/2022/09/Sem-título-7-1-150x150.png 150w, https://lactalis.com.br/wp-content/uploads/2022/09/Sem-título-7-1-768x768.png 768w" sizes="(max-width: 1080px) 100vw, 1080px" />				<div class="creditos">Sem-título-7-1</div>				<div class="text">
+					<p>A manteiga Président foi escolhida como a melhor do Brasil em teste promovido pelo suplemento Paladar, do jornal O Estado de S. Paulo. A escolha se deu por meio de cinco especialistas consultados pelo jornal e submetidos a um teste às cegas de 11 amostras de manteiga sem sal, nacionais e importadas. Eles tiveram que responder a um questionário, comentando sobre textura, sabor, aromas e sentimentos que as manteigas trazem.</p>
+<p>Os jurados foram Alethea Suedt, padeira que planta o próprio trigo para a produção dos pães; Carlos Siffert, consultor do empório Casa Santa Luzia e professor da Escola Wilma Kövesi de Cozinha de São Paulo; Francisco Lobello, mestre-queijeiro e responsável pelas ricotas da Brivido; Luiz Filipe Souza, chef do restaurante Evvai; e Renata Braune, chef formada pela Le Cordon Bleu Paris. Descrita como suave, mas com personalidade, a cremosidade e sabor da manteiga impressionaram, em especial pelas notas amendoadas. Segundo os jurados, a manteiga Président possui tudo que se espera de uma manteiga sem sal.</p>
+<p>Produzida no Rio Grande do Sul desde 2018, a manteiga Président segue a tradicional receita francesa e tem destacado potencial culinário. Está disponível em potes e tabletes de 200g. As manteigas da Itambé e Batavo também compõem o ranking em 6° e 7° lugar, respectivamente.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3389">
+								<h4 class="title">Queijo Président será reconhecido com o prêmio Carrinho Agas 2021</h4>
+				<div class="date">24/11/21</div>
+				<img width="302" height="272" src="../../wp-content/uploads/2021/11/SiteLACTALIS.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Carolina Jardine" srcset="https://lactalis.com.br/wp-content/uploads/2021/11/SiteLACTALIS.jpg 302w, https://lactalis.com.br/wp-content/uploads/2021/11/SiteLACTALIS-300x270.jpg 300w, https://lactalis.com.br/wp-content/uploads/2021/11/SiteLACTALIS-60x54.jpg 60w" sizes="(max-width: 302px) 100vw, 302px" />				<div class="creditos">Carolina Jardine</div>				<div class="text">
+					<p>A Président, integrante do portfólio de marcas da Lactalis do Brasil, será reconhecida com o prêmio Carrinho Agas 2021 na categoria Queijos. Concedido pela Associação Gaúcha de Supermercados (Agas), o mérito destaca marcas de diferentes segmentos em 36 categorias, além de duas personalidades. O prêmio será entregue na segunda-feira (29/11) em evento a ser realizado de forma híbrida a partir das 20h. A solenidade receberá até 350 pessoas na Associação Leopoldina Juvenil, em Porto Alegre (RS), e poderá ser acompanhada pelo canal no YouTube da Agas.</p>
+<p>Os vencedores foram escolhidos por 250 supermercados gaúchos. Eles elegeram o melhor fornecedor na sua opinião para cada uma das categorias.</p>
+<p>Em 2020, a Elegê, também integrante das marcas da Lactalis, foi agraciada com o prêmio na categoria Melhor Fornecedor de Leites.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3364">
+								<h4 class="title">Cade aprova aquisição, e Lactalis assume operações industriais da Cativa</h4>
+				<div class="date">01/06/21</div>
+				<img width="302" height="272" src="../../wp-content/uploads/2021/06/Carolina-Jardine.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2021/06/Carolina-Jardine.jpg 302w, https://lactalis.com.br/wp-content/uploads/2021/06/Carolina-Jardine-300x270.jpg 300w, https://lactalis.com.br/wp-content/uploads/2021/06/Carolina-Jardine-60x54.jpg 60w" sizes="(max-width: 302px) 100vw, 302px" />				<div class="creditos">Carolina Jardine</div>				<div class="text">
+					<p>O Conselho Administrativo de Defesa Econômica (Cade) autorizou a Lactalis do Brasil a incorporar os ativos pertencentes à Cooperativa Cativa, com sede em Londrina, no Paraná. A operação, concluída nesta terça-feira (1º/06), exatos dois meses após o anúncio de intenção, foi formalizada em comunicado ao mercado nesta tarde. Com a aquisição, a Lactalis assume as fábricas localizadas em Cerqueira César (SP) e Londrina (PR) e o centro de coleta de Pato Branco (PR), bem como toda a estrutura comercial da Cativa. Para tanto, a negociação incluiu revisão de passivo e garantia de aquisição de leite dos 4 mil cooperados da Cativa por um prazo de dez anos, renováveis por mais dez.</p>
+<p>A intenção da Lactalis do Brasil é manter a produção de leite UHT com as marcas Polly e Cativa, passando a envasar – também – produtos das marcas Batavo, Elegê e Parmalat. As unidades paranaenses também deverão fabricar derivados, a exemplo de Leite em Pó, Composto Lácteo e Manteiga.</p>
+<p>Focada em desenvolver o potencial da bacia leiteira do Paraná, segundo maior estado produtor de leite do Brasil, a Lactalis do Brasil trará toda sua expertise internacional em gestão e assistência técnica aos produtores de leite. A meta é elevar o faturamento das operações do Paraná e alavancar a captação de 360 milhões de litros ano para volume próximo a 500 milhões no prazo de dois anos. Agora, a produção soma-se às operações da Lactalis, líder nacional no segmento com faturamento de R$ 9,8 bilhões em 2020 e um volume de captação, até então, de 2,7 bilhões de litros de leite ao ano. Para Patrick Sauvageot, presidente da Lactalis América Latina, a incorporação dos ativos da Cativa representa um novo momento da atuação da empresa, que completa 6 anos de Brasil neste dia 1º de junho. “A parceria com a Cativa é um exemplo da nossa ação em favor do desenvolvimento cooperativo do setor de laticínios do Brasil. Entendemos que há um caminho muito promissor nesse sentido a ser desenvolvido por parcerias e capaz de ganhar eco em diferentes regiões do país”.</p>
+<p>O presidente da Cativa, Paulo Cesar Maciel, informou que a negociação ampliou o potencial de investimento em oferta de tecnologia e inovação aos cooperados. A partir de agora, explica ele, a cooperativa irá focar no atendimento de seus produtores e na melhoria da qualidade do leite que é entregue à indústria. “Vamos nos beneficiar do know how da Lactalis na área de lácteos, uma empresa sólida e confiável com quem nós construímos uma relação de confiança que queremos manter ao longo do tempo&#8221;.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3351">
+								<h4 class="title">Cooperativa Cativa &#038; Lactalis do Brasil firmam Parceria Estratégica* </h4>
+				<div class="date">31/03/21</div>
+				<img width="302" height="272" src="../../wp-content/uploads/2021/03/cativa.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2021/03/cativa.png 302w, https://lactalis.com.br/wp-content/uploads/2021/03/cativa-300x270.png 300w, https://lactalis.com.br/wp-content/uploads/2021/03/cativa-60x54.png 60w" sizes="(max-width: 302px) 100vw, 302px" />				<div class="creditos">cativa</div>				<div class="text">
+					<p>Em 31 de março de 2021, a Lactalis do Brasil firmou um acordo de parceria com a Cooperativa Cativa, com sede em Londrina, no Estado do Paraná. O acordo prevê uma parceria de longo prazo, tendo como base um contrato de fornecimento exclusivo de leite por parte da Cativa à Lactalis por 10 anos e renovável por mais 10 anos.</p>
+<p>O projeto tem o objetivo de desenvolver ainda mais, em conjunto, a bacia leiteira da cooperativa e da região. Neste escopo, a Lactalis adquire as unidades operacionais da Cativa localizadas em Cerqueira César (SP) e Londrina (PR) e o centro de coleta de Pato Branco (PR), bem como toda a estrutura comercial da Cativa.</p>
+<p>A Cooperativa Cativa foi fundada em 1964 e é uma das líderes de captação e processamento de leite no Estado do Paraná. Em 2020, seu faturamento foi de R$ 1,1 bilhão e a captação anual de leite de 360 milhões de litros. Para Paulo Cesar Maciel, presidente da Cativa, “a cooperativa vai se concentrar na relação com os produtores, na melhoria da qualidade do leite e no desenvolvimento da coleta se beneficiando do <em>know how</em> da Lactalis na área de lácteos, uma empresa sólida e confiável com quem nós construímos uma relação de confiança que queremos manter ao longo do tempo&#8221;.</p>
+<p>A Lactalis do Brasil, líder do segmento de lácteos no Brasil, teve um faturamento de R$ 9,8 bilhões em 2020 e um volume de captação de 2,7 bilhões de litros de leite. Para Patrick Sauvageot, presidente da Lactalis América Latina, “com essa parceria “ganha-ganha”, a Lactalis se beneficia da experiência e da confiança da cooperativa junto aos seus 4.000 produtores, aos quais nós trazemos nosso conhecimento industrial e a perspectiva de desenvolvimento de sua produção. Após o acordo assinado com a CCPR em 2019 em Minas Gerais, número 1 em produção de leite no Brasil, essa parceria com a Cativa reforça nossa presença no Paraná, segundo estado produtor, consolidando assim nossa ação em favor do desenvolvimento do setor de laticínios do Brasil” .</p>
+<p><em> </em><em>* as empresas assinaram um acordo exclusivo que passará pela avaliação do CADE (Conselho Administrativo de Defesa Econômica)</em></p>
+<p>&nbsp;</p>
+<p>Leia o comunicado <a href="https://lactalis.com.br/wp-content/uploads/2021/03/Comunicado_Cativa_31_03.pdf">aqui</a></p>
+<p><strong>Mais informações acesse:<br />
+<a href="https://www.cativa.coop.br/" data-saferedirecturl="https://www.google.com/url?q=https://www.cativa.coop.br/&amp;source=gmail&amp;ust=1617301865324000&amp;usg=AFQjCNFMEgqP-CPti-wFL1w8URmQZDPOIg">https://www.cativa.coop.br/</a><br />
+<a href="https://www.lactalis.com.br/" data-saferedirecturl="https://www.google.com/url?q=https://www.lactalis.com.br&amp;source=gmail&amp;ust=1617301865324000&amp;usg=AFQjCNHFtf61VN21fc9_outSUIYrFMg_yQ">https://www.lactalis.com.br</a></strong></p>
+<p><strong>São Paulo, 31 de março de 2021</strong></p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3334">
+								<h4 class="title">Lactalis amplia exportações e abre mercado para lácteos do Brasil</h4>
+				<div class="date">06/01/21</div>
+				<img width="1080" height="1080" src="../../wp-content/uploads/2021/01/Carolina-Jardine.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2021/01/Carolina-Jardine.png 1080w, https://lactalis.com.br/wp-content/uploads/2021/01/Carolina-Jardine-300x300.png 300w, https://lactalis.com.br/wp-content/uploads/2021/01/Carolina-Jardine-1024x1024.png 1024w, https://lactalis.com.br/wp-content/uploads/2021/01/Carolina-Jardine-150x150.png 150w, https://lactalis.com.br/wp-content/uploads/2021/01/Carolina-Jardine-768x768.png 768w, https://lactalis.com.br/wp-content/uploads/2021/01/Carolina-Jardine-60x60.png 60w" sizes="(max-width: 1080px) 100vw, 1080px" />				<div class="creditos">Carolina Jardine</div>				<div class="text">
+					<p>A Lactalis do Brasil, empresa responsável pela produção das marcas Elegê, Parmalat e Président, encerrou o ano de 2020 com projeção de elevar em 167% o volume de produtos exportados em relação a 2019. Ao longo do ano passado, mesmo com as dificuldades logísticas impostas pela pandemia a todos os setores industriais, a Lactalis conseguiu agregar em seu portfólio quatro novos países compradores para produtos do Brasil. Paraguai, Argentina, Colômbia e Peru são os mais recentes clientes, além de Uruguai e Chile, que já importavam em 2019. Em breve, a República Dominicana também deve entrar para essa lista. A previsão da empresaera de encerrar o ano com um volume de 3.431 toneladas embarcadas, contra 1.284 toneladas registradas em 2019, o que se confirmou.</p>
+<p>O mercado externo para a Lactalis deu um salto importante também em famílias de produtos enviados para fora do Brasil. Em 2019, figuravam nesta lista apenas quatro produtos &#8211; leite UHT em garrafa, leite aromatizado, leite condensado e creme de leite. A partir de 2020, o portfólio voltado para as exportações expandiu para 10 itens, incluindo manteigas (tablete e pote), queijos (mussarela, prato e gouda), requeijão e latas de leite condensado. “A família para exportação cresceu, assim como o número de países compradores e o volume médio embarcado por mês. Saltamos de 107 toneladas/mês no início do ano para 286 toneladas/mês”, destacou o diretor de Comunicação Externa da Lactalis do Brasil, Guilherme Portella.</p>
+<p>De acordo com o executivo, novas perspectivas se abrem para os produtos lácteos do Brasil, itens que vêm ganhando mercado por sua qualidade e diferenciais competitivos. “Os desafios para 2021 são ambiciosos. A Lactalis pretende intensificar o fluxo de exportação, avançando e abrindo novos mercados para os lácteos do Brasil de forma a valorizar a produção local”, informou Portella.</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3320">
+								<h4 class="title">Elegê é agraciada com o prêmio Carrinho Agas 2020</h4>
+				<div class="date">30/11/20</div>
+				<img width="1080" height="1080" src="../../wp-content/uploads/2020/11/Lactalis-Pr%c3%aamio.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2020/11/Lactalis-Prêmio.png 1080w, https://lactalis.com.br/wp-content/uploads/2020/11/Lactalis-Prêmio-300x300.png 300w, https://lactalis.com.br/wp-content/uploads/2020/11/Lactalis-Prêmio-1024x1024.png 1024w, https://lactalis.com.br/wp-content/uploads/2020/11/Lactalis-Prêmio-150x150.png 150w, https://lactalis.com.br/wp-content/uploads/2020/11/Lactalis-Prêmio-768x768.png 768w, https://lactalis.com.br/wp-content/uploads/2020/11/Lactalis-Prêmio-60x60.png 60w" sizes="(max-width: 1080px) 100vw, 1080px" />				<div class="creditos">Lactalis Prêmio</div>				<div class="text">
+					<p>A Elegê, que integra o escopo de marcas da Lactalis do Brasil, será agraciada com o troféu Carrinho Agas 2020, na categoria Melhor Fornecedor de Leites. A premiação, concedida pela Associação Gaúcha de Supermercados (Agas), destaca produtos nas gôndolas dos supermercados gaúchos a partir de avaliação de diversos critérios. O evento é considerado um dos mais tradicionais do varejo nacional, almejado por muitas empresas da indústria que trabalham com o setor no Estado. Segundo o gerente comercial da Elegê, Jairo Rocha, a premiação é resultado de um trabalho permanente focado no atendimento das demandas das famílias por um alimento saudável e de qualidade, assim como no comprometimento com os estabelecimentos com os quais atua. “A Elegê é uma marca forte, com muita tradição nos mercados em que está presente. A marca é uma estilização do ‘L’ e do ‘G’, que significa Leite Gaúcho. O reconhecimento no Carrinho Agas é o resultado disso tudo, ou seja, confiança no produto que está nas gôndolas dos supermercados e preferência por parte dos consumidores”, afirma o executivo.</p>
+<p>A pesquisa para definir os vencedores deste ano iniciou em outubro. Ao todo, 26 marcas entre vários segmentos integram a lista de agraciados. A escolha final ocorreu através de votação direta por parte dos 200 maiores supermercados do Rio Grande do Sul, que levaram em conta critérios como responsabilidade social na pandemia, share de mercado, qualidade dos produtos ou serviços, relacionamento com o varejo, índices de ruptura, capacidade de inovação e cumprimento de prazos de entrega. O segmento de supermercados no RS conta com 4,9 mil lojas e emprega diretamente 104 mil pessoas. O faturamento bruto do setor em 2020 deverá atingir os R$ 35 bilhões, representando cerca de 7% do PIB Estadual e 41% do total faturado pelo setor na Região Sul do País.</p>
+<p>A solenidade de premiação nesta segunda-feira (30/11), a partir das 21h30, de forma virtual. O recebimento dos troféus poderá ser acompanhado pelo canal da Agas no Youtube (www.youtube.com/AGASPOARS).</p>
+<p><strong>Na foto:</strong> Gerente comercial da Elegê, Jairo Rocha, e colaboradora da Lactalis, Fabiana Vívian.<br />
+<strong>Crédito:</strong> Divulgação Lactalis</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3297">
+								<h4 class="title">Lactalis do Brasil doa alimentos a entidades no Rio Grande do Sul</h4>
+				<div class="date">21/05/20</div>
+				<img width="1013" height="720" src="../../wp-content/uploads/2020/05/foto-caminh%c3%a3o-le.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2020/05/foto-caminhão-le.jpeg 1013w, https://lactalis.com.br/wp-content/uploads/2020/05/foto-caminhão-le-300x213.jpeg 300w, https://lactalis.com.br/wp-content/uploads/2020/05/foto-caminhão-le-768x546.jpeg 768w, https://lactalis.com.br/wp-content/uploads/2020/05/foto-caminhão-le-60x43.jpeg 60w" sizes="(max-width: 1013px) 100vw, 1013px" />				<div class="creditos"></div>				<div class="text">
+					<p>Três entidades assistenciais de Porto Alegre e uma de Teutônia receberam doações de alimentos da Lactalis do Brasil, indústria de laticínios com fábricas no Rio Grande do Sul. Na capital, o caminhão da Lactalis foi até o Asilo Padre Cacique, à Fundação Pão dos Pobres e ao Instituto Pobres Servos da Divina Providência. Em Teutônia, a entidade beneficiada foi o Clube de Mães Lar da Amizade. Todas as quatro instituições &#8211; que atendem idosos e crianças &#8211; receberam alimentos da linha seca e resfriada &#8211; iogurtes, bebidas lácteas, leite UHT, queijos e sobremesas.</p>
+<p>Ao Asilo Padre Cacique foram doados 746 quilos de alimentos para serem distribuídos aos idosos internos da instituição; à Fundação Pão dos Pobres foram entregues 1.366 quilos em produtos; o Instituto Pobres Servos da Divina Providência recebeu 774 quilos de alimentos e, para o Clube de Mães de Teutônia, foram doados 380 quilos de produtos.</p>
+<p>A doação é mais uma iniciativa de responsabilidade social da Lactalis nas cidades onde está presente, com o objetivo de atender às necessidades de comunidades carentes com o fornecimento de alimentos neste momento de dificuldades impostas pela pandemia do coronavírus.</p>
+<p><img class="aligncenter wp-image-3301 size-large" src="../../wp-content/uploads/2020/05/Padre-Cacique-6-Sandro-Oliveira-1024x576.jpg" alt="Padre Cacique 6 Sandro Oliveira" width="1024" height="576" srcset="https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-6-Sandro-Oliveira-1024x576.jpg 1024w, https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-6-Sandro-Oliveira-300x169.jpg 300w, https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-6-Sandro-Oliveira-768x432.jpg 768w, https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-6-Sandro-Oliveira-60x34.jpg 60w, https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-6-Sandro-Oliveira.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>&nbsp;</p>
+<p><img class="aligncenter wp-image-3300 size-full" src="../../wp-content/uploads/2020/05/Padre-Cacique-4-sandro-oliveira.jpg" alt="Padre Cacique 4 sandro oliveira" width="1040" height="584" srcset="https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-4-sandro-oliveira.jpg 1040w, https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-4-sandro-oliveira-300x168.jpg 300w, https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-4-sandro-oliveira-768x431.jpg 768w, https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-4-sandro-oliveira-1024x575.jpg 1024w, https://lactalis.com.br/wp-content/uploads/2020/05/Padre-Cacique-4-sandro-oliveira-60x34.jpg 60w" sizes="(max-width: 1040px) 100vw, 1040px" /></p>
+<p><img class="aligncenter wp-image-3299 size-full" src="../../wp-content/uploads/2020/05/Divina-4.jpg" alt="Divina 4" width="1280" height="720" srcset="https://lactalis.com.br/wp-content/uploads/2020/05/Divina-4.jpg 1280w, https://lactalis.com.br/wp-content/uploads/2020/05/Divina-4-300x169.jpg 300w, https://lactalis.com.br/wp-content/uploads/2020/05/Divina-4-768x432.jpg 768w, https://lactalis.com.br/wp-content/uploads/2020/05/Divina-4-1024x576.jpg 1024w, https://lactalis.com.br/wp-content/uploads/2020/05/Divina-4-60x34.jpg 60w" sizes="(max-width: 1280px) 100vw, 1280px" /></p>
+<p><img class="aligncenter wp-image-3303 size-large" src="../../wp-content/uploads/2020/05/P%c3%a3o-dos-Pobres-4-1-1024x576.jpg" alt="Pão dos Pobres 4 (1)" width="1024" height="576" srcset="https://lactalis.com.br/wp-content/uploads/2020/05/Pão-dos-Pobres-4-1-1024x576.jpg 1024w, https://lactalis.com.br/wp-content/uploads/2020/05/Pão-dos-Pobres-4-1-300x169.jpg 300w, https://lactalis.com.br/wp-content/uploads/2020/05/Pão-dos-Pobres-4-1-768x432.jpg 768w, https://lactalis.com.br/wp-content/uploads/2020/05/Pão-dos-Pobres-4-1-60x34.jpg 60w, https://lactalis.com.br/wp-content/uploads/2020/05/Pão-dos-Pobres-4-1.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>&nbsp;</p>
+<p>Fotos: Sandro de Oliveira</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+						<div class="item 3292">
+								<h4 class="title">Grupo Lactalis adere ao movimento #NÃODEMITA</h4>
+				<div class="date">01/05/20</div>
+				<img width="303" height="272" src="../../wp-content/uploads/2020/05/foto-n%c3%a3odemita-site.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://lactalis.com.br/wp-content/uploads/2020/05/foto-nãodemita-site.jpg 303w, https://lactalis.com.br/wp-content/uploads/2020/05/foto-nãodemita-site-300x269.jpg 300w, https://lactalis.com.br/wp-content/uploads/2020/05/foto-nãodemita-site-60x54.jpg 60w" sizes="(max-width: 303px) 100vw, 303px" />				<div class="creditos"></div>				<div class="text">
+					<p>Com mais de 8,6 mil funcionários no país, a Lactalis foi a primeira entre as grandes empresas do setor de laticínios brasileiro a anunciar seu ingresso no movimento #NÃODEMITA, manifesto que assegura a manutenção do quadro de colaboradores durante a pandemia de Coronavírus.</p>
+<p>Todas as empresas do grupo &#8211; Lactalis do Brasil, Nutrifont e Itambé Alimentos aderiram ao movimento. O grupo Lactalis, dono das marcas Itambé, Elegê, Batavo, Parmalat e Nutrifont, atua com 19 fábricas espalhadas por oito estados brasileiros. “A Lactalis está comprometida com o desenvolvimento do Brasil, com seus funcionários e famílias. O momento é de trabalho e união”, frisou o presidente da empresa, Patrick Sauvageot. O movimento #NÂODEMITA já conta com a adesão de mais de 4 mil empresas no compromisso de manutenção de seus quadros até, no mínimo, 31 de maio de 2020.</p>
+<p>Com mais essa iniciativa, a Lactalis reforça o comprometimento com seus funcionários, que desde o início da pandemia não mediram esforços para dar continuidade às operações. &#8220;A produção de alimentos, em especial leites e derivados, é de grande importância social nesse momento e nossos colaboradores estão empenhados e cientes de seu papel. São verdadeiros heróis nesse momento, como todos aqueles que desempenham atividades essenciais. Assim, mesmo em tempo de crise, e com um forte impacto no mercado, estamos nos comprometendo a garantir a manutenção de nosso time, afinal são eles que todos os dias mantêm a engrenagem da produção girando para abastecer as famílias em suas casas&#8221;, completou Sauvageot.</p>
+<p>Em função do avanço da Covid-19, a Lactalis, líder em captação de leite no Brasil, implantou em todas as suas unidades diversas medidas preventivas para resguardar suas equipes e manter a entrega e a qualidade de seus produtos. No campo, estimulou maior isolamento das propriedades e a proteção ao produtor. Nas fábricas, liberou funcionários dos grupos de risco e adotou rígidas normas de higiene, aumentando o distanciamento entre os funcionários, reduzindo linhas de produção e escalonando intervalos. Consciente de seu papel na sociedade, a Lactalis também realizou doações de alimentos e álcool gel às comunidades onde atua.</p>
+<p>Outra iniciativa foi a campanha #HEROISLACTALIS, criada pela empresa para homenagear a dedicação de seu time neste período desafiador. &#8220;Estamos retribuindo a esses heróis a responsabilidade social que assumiram diante da empresa e da sociedade &#8220;, lembrou.</p>
+<p>Foto: Carolina Jardine</p>
+				</div>
+				<div class="voltar"></div>
+			</div>
+	</div>
+
+<footer>
+	<div class="content">
+		<div class="top-side">
+			<div class="spaces">
+				<span>
+					Fique por dentro das novidades				</span>
+				<div class="news">
+														</div>
+			</div>
+			<div class="right-side">
+				<div class="left">
+					<li><a href="../quem-somos/index.html">Institucional</a></li>
+                    <li><a href="../nossas-marcas/index.html">Produtos</a></li>
+                    <li><a href="../produtor-lactalis/index.html">Produtor</a></li>
+				 	<li><a href="index.html">Notícias</a></li>
+				 	<li><a href="../institucional-trabalhe-conosco/index.html">Nossa gente</a></li>
+                    <li><a href="../contato/index.html">Contato</a></li>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-side">
+						<a class="logo" href="https://lactalis.com.br/"></a>
+			<a class="logoastrusft" href="http://astrusweb.com.br/"></a>
+			<div class="redes">
+							</div>
+		</div>
+		
+	</div>
+</footer>
+
+  <!--copyscapeskip-->
+  <aside id="moove_gdpr_cookie_info_bar" class="moove-gdpr-info-bar-hidden moove-gdpr-align-center moove-gdpr-light-scheme gdpr_infobar_postion_bottom" role="note" aria-label="GDPR Cookie Banner" style="display: none;">
+    <div class="moove-gdpr-info-bar-container">
+      <div class="moove-gdpr-info-bar-content">
+        
+<div class="moove-gdpr-cookie-notice">
+  <p>Utilizamos ferramentas e serviços de terceiros que utilizam cookies.<br />
+Essas ferramentas nos ajudam a oferecer uma melhor experiência de navegação no site.</p>
+<p>Ao clicar no botão "Aceitar" você concorda com o uso de cookies em nosso site. <span role="link"  tabindex="1"  data-href="#moove_gdpr_cookie_modal" class="change-settings-button">Configurações</span></p>
+<p><span style="font-size: 11pt;"> </span></p>
+</div>
+<!--  .moove-gdpr-cookie-notice -->        
+<div class="moove-gdpr-button-holder">
+		  <button class="mgbutton moove-gdpr-infobar-allow-all gdpr-fbo-0" aria-label="Aceitar"  tabindex="1"  role="button">Aceitar</button>
+	  </div>
+<!--  .button-container -->      </div>
+      <!-- moove-gdpr-info-bar-content -->
+    </div>
+    <!-- moove-gdpr-info-bar-container -->
+  </aside>
+  <!-- #moove_gdpr_cookie_info_bar -->
+  <!--/copyscapeskip-->
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/vendor.js'></script>
+<script type='text/javascript' src='../../../cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/modernizr-2.6.2.min4e44.js?ver=1.3'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/add-to-homescreen4e44.js?ver=1.3'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/login73ad.js?ver=0.0'></script>
+<script type='text/javascript' src='../../wp-content/themes/astrusweb/assets/js/default73ad.js?ver=0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var moove_frontend_gdpr_scripts = {"ajaxurl":"https:\/\/lactalis.com.br\/wp-admin\/admin-ajax.php","post_id":"2533","plugin_dir":"https:\/\/lactalis.com.br\/wp-content\/plugins\/gdpr-cookie-compliance","show_icons":"all","is_page":"1","strict_init":"1","enabled_default":{"third_party":0,"advanced":0},"geo_location":"false","force_reload":"false","is_single":"","hide_save_btn":"false","current_user":"0","cookie_expiration":"365","script_delay":"2000","close_btn_action":"1","close_cs_action":"1","scripts_defined":"{\"cache\":true,\"header\":\"\",\"body\":\"\",\"footer\":\"\",\"thirdparty\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"},\"advanced\":{\"header\":\"\",\"body\":\"\",\"footer\":\"\"}}","gdpr_scor":"true","wp_lang":"_pt"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/gdpr-cookie-compliance/dist/scripts/main5859.js?ver=4.9.1'></script>
+<script type='text/javascript'>
+var gdpr_consent__strict = "false"
+var gdpr_consent__thirdparty = "false"
+var gdpr_consent__advanced = "false"
+var gdpr_consent__cookies = ""
+</script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embedc225.js?ver=5.4.1'></script>
+
+    
+  <!--copyscapeskip-->
+  <!-- V1 -->
+  <div id="moove_gdpr_cookie_modal" class="gdpr_lightbox-hide" role="complementary" aria-label="GDPR Settings Screen">
+    <div class="moove-gdpr-modal-content moove-clearfix logo-position-left moove_gdpr_modal_theme_v1">
+          
+        <button class="moove-gdpr-modal-close" aria-label="Close GDPR Cookie Settings">
+          <span class="gdpr-sr-only">Close GDPR Cookie Settings</span>
+          <span class="gdpr-icon moovegdpr-arrow-close"></span>
+        </button>
+            <div class="moove-gdpr-modal-left-content">
+        
+<div class="moove-gdpr-company-logo-holder">
+  <img src="../../wp-content/uploads/2019/01/logo_lactalis_brasil-300x100.png" alt=""   width="300"  height="100"  class="img-responsive" />
+</div>
+<!--  .moove-gdpr-company-logo-holder -->        <ul id="moove-gdpr-menu">
+          
+<li class="menu-item-on menu-item-privacy_overview menu-item-selected">
+  <button data-href="#privacy_overview" class="moove-gdpr-tab-nav" aria-label="Visão geral de privacidade">
+    <span class="gdpr-nav-tab-title">Visão geral de privacidade</span>
+  </button>
+</li>
+
+  <li class="menu-item-strict-necessary-cookies menu-item-off">
+    <button data-href="#strict-necessary-cookies" class="moove-gdpr-tab-nav" aria-label="Cookies estritamente necessários">
+      <span class="gdpr-nav-tab-title">Cookies estritamente necessários</span>
+    </button>
+  </li>
+
+
+
+
+        </ul>
+        
+<div class="moove-gdpr-branding-cnt">
+  
+		<a href="https://wordpress.org/plugins/gdpr-cookie-compliance/" target="_blank" rel="noopener noreferrer nofollow" class='moove-gdpr-branding'>Distribuído por&nbsp; <span>GDPR Cookie Compliance</span></a>
+		</div>
+<!--  .moove-gdpr-branding -->      </div>
+      <!--  .moove-gdpr-modal-left-content -->
+      <div class="moove-gdpr-modal-right-content">
+        <div class="moove-gdpr-modal-title">
+           
+        </div>
+        <!-- .moove-gdpr-modal-ritle -->
+        <div class="main-modal-content">
+
+          <div class="moove-gdpr-tab-content">
+            
+<div id="privacy_overview" class="moove-gdpr-tab-main">
+      <span class="tab-title">Visão geral de privacidade</span>
+    <div class="moove-gdpr-tab-main-content">
+  	<p>Este site usa cookies para que possamos oferecer a melhor experiência de usuário possível. As informações de cookies são armazenadas em seu navegador e executam funções como reconhecê-lo quando você retorna ao nosso site e ajudar nossa equipe a entender quais seções do site você considera mais interessantes e úteis.</p>
+  	  </div>
+  <!--  .moove-gdpr-tab-main-content -->
+
+</div>
+<!-- #privacy_overview -->            
+  <div id="strict-necessary-cookies" class="moove-gdpr-tab-main" style="display:none">
+    <span class="tab-title">Cookies estritamente necessários</span>
+    <div class="moove-gdpr-tab-main-content">
+      <p>O cookie estritamente necessário deve estar ativado o tempo todo para que possamos salvar suas preferências de configuração de cookies.</p>
+      <div class="moove-gdpr-status-bar ">
+        <div class="gdpr-cc-form-wrap">
+          <div class="gdpr-cc-form-fieldset">
+            <label class="cookie-switch" for="moove_gdpr_strict_cookies">    
+              <span class="gdpr-sr-only">Enable or Disable Cookies</span>        
+              <input type="checkbox" aria-label="Cookies estritamente necessários"  value="check" name="moove_gdpr_strict_cookies" id="moove_gdpr_strict_cookies">
+              <span class="cookie-slider cookie-round" data-text-enable="Habilitado" data-text-disabled="Desabilitado"></span>
+            </label>
+          </div>
+          <!-- .gdpr-cc-form-fieldset -->
+        </div>
+        <!-- .gdpr-cc-form-wrap -->
+      </div>
+      <!-- .moove-gdpr-status-bar -->
+              <div class="moove-gdpr-strict-warning-message" style="margin-top: 10px;">
+          <p>Se você desativar este cookie, não poderemos salvar suas preferências. Isso significa que toda vez que você visitar este site, precisará habilitar ou desabilitar os cookies novamente.</p>
+        </div>
+        <!--  .moove-gdpr-tab-main-content -->
+                                              
+    </div>
+    <!--  .moove-gdpr-tab-main-content -->
+  </div>
+  <!-- #strict-necesarry-cookies -->
+            
+            
+            
+          </div>
+          <!--  .moove-gdpr-tab-content -->
+        </div>
+        <!--  .main-modal-content -->
+        <div class="moove-gdpr-modal-footer-content">
+          <div class="moove-gdpr-button-holder">
+			  		<button class="mgbutton moove-gdpr-modal-allow-all button-visible" role="button" aria-label="Habilitar todos">Habilitar todos</button>
+		  					<button class="mgbutton moove-gdpr-modal-save-settings button-visible" role="button" aria-label="Salvar Mudanças">Salvar Mudanças</button>
+				</div>
+<!--  .moove-gdpr-button-holder -->        </div>
+        <!--  .moove-gdpr-modal-footer-content -->
+      </div>
+      <!--  .moove-gdpr-modal-right-content -->
+
+      <div class="moove-clearfix"></div>
+
+    </div>
+    <!--  .moove-gdpr-modal-content -->
+  </div>
+  <!-- #moove_gdpr_cookie_modal -->
+  <!--/copyscapeskip-->
+</body>
+
+<!-- Mirrored from lactalis.com.br/pt/noticias-lactalis/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Apr 2023 05:24:22 GMT -->
+</html>

@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+lactalis.com.br	TRUE	/	FALSE	1999999999	PHPSESSID	arqgqme48egjistl2v5gbj5vu8
+lactalis.com.br	TRUE	/	FALSE	1999999999	pll_language	pt
+lactalis.com.br	TRUE	/	FALSE	1999999999	SameSite	Lax
+
